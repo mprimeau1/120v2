@@ -4,7 +4,7 @@
 
 
 
-##  This week in coding I learned how to draw a sketch. I played with Atom for hours trying to make my perfect self portrait. I wrote the longest bit of code I have ever written using many new functions.  The code I used the most was the ellipse, I used it multiple times for my eyes and polka dots on my dress. I learned about push and pop, sometimes I would be writing my code and all the sudden a line color or stroke would suddenly change, I figured out that sometimes I would forget to put push or pop.  This would create abnormalities throughout my picture, once I put in the appropriate push or pop the image would change back to how I would like it to look.
+##  This week in coding I learned how to draw a sketch. I played with Atom for hours trying to make my perfect self portrait. I wrote the longest bit of code I have ever written using many new functions.  The code I used the most was the ellipse, I used it multiple times for my eyes and polka dots on my dress. I learned about push and pop, sometimes I would be writing my code and all of a sudden a line color or stroke would suddenly change, I figured out that sometimes I would forget to put push or pop.  This would create abnormalities throughout my picture, once I put in the appropriate push or pop the image would change back to how I would like it to look.
 
 
 ``` Issues ```

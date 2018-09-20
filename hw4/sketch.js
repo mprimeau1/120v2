@@ -60,6 +60,8 @@ function draw() {
 
     pop();
 
+    // polka dots for dress
+
 
     push();
     fill('black');
@@ -74,7 +76,6 @@ function draw() {
 
     pop();
     // **END BODY**
-
 
 
   // ** HEAD **********************************
@@ -128,15 +129,12 @@ function draw() {
     ellipse(285, 130, 5, 5);
     ellipse(310, 130, 5, 5);
 
-
     pop();
     // **END EYES**
 
     pop();
     // **END HEAD**
 
-
     // ** END CHARACTER SANDBOX *******************
     pop();
-
 }
