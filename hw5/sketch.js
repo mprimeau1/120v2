@@ -1,8 +1,9 @@
+//
 function setup(){
 
 //background
     createCanvas( 600,600 );
-
+let angle = 0;
     background('blue');
     noCursor();
     translate( mouseX, mouseY );
@@ -15,7 +16,6 @@ function setup(){
       print(fr);
 
     }
-    push();
 
 
 // Penguin body
@@ -29,6 +29,8 @@ pop();
 push();
 fill('white');
 ellipse(300, 350, 60, 175);
+
+pop();
 
 //head
 
@@ -87,7 +89,6 @@ pop();
 
 //arm left
 
-
 push();
 strokeWeight(25);
 line(265,285,265,390);
@@ -123,8 +124,6 @@ pop();
 push();
 fill('red');
 ellipse(400,160,80,80);
-pop();
-
 pop();
 
 }
