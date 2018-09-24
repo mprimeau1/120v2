@@ -97,6 +97,20 @@ fill('orange');
 ellipse(300, 475, 75, 20);
 pop();
 
+//balloon string
+
+push();
+strokeWeight(2);
+line(400,175,400,330);
+pop();
+
+//balloon
+
+push();
+fill('red');
+ellipse(400,160,80,80);
+pop();
+
 
 
 }
