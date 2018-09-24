@@ -75,17 +75,17 @@ pop();
 //arm left
 
 push();
-fill('black');
-ellipse(262, 375, 30, 200);
+strokeWeight(25);
+line(265,285,265,390);
 pop();
 
 //arm right
 
 push();
-fill('black');
-ellipse(338, 325, 25, 100);
+strokeWeight(25);
+line(340,285,340,365);
 strokeWeight(20);
-line(340,365,390,330);
+line(342,365,390,330);
 
 pop();
 
