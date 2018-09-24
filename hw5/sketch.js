@@ -35,22 +35,21 @@ pop();
 //feet
 
 push();
-fill('black');
+strokeWeight(15);
+fill('orange');
 ellipse(300, 475, 75, 40);
 pop();
-
-
 
 //arms
 
 push();
 fill('black');
-ellipse(265, 375, 30, 200);
+ellipse(262, 375, 30, 200);
 pop();
 
 push();
 fill('black');
-ellipse(335, 375, 30, 200);
+ellipse(338, 375, 30, 200);
 pop();
 
 }
