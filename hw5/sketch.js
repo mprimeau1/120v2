@@ -83,9 +83,9 @@ pop();
 
 push();
 fill('black');
-ellipse(338, 320, 25, 100);
+ellipse(338, 325, 25, 100);
 strokeWeight(20);
-line(345,332,370,350);
+line(340,365,390,330);
 
 pop();
 
