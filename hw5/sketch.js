@@ -1,8 +1,23 @@
 function setup(){
 
-  //background
+//background
     createCanvas( 600,600 );
 
     background('blue');
+
+// Penguin body
+
+push();
+
+fill('black');
+ellipse(300, 350, 75, 275);
+pop();
+
+
+push();
+
+fill('black');
+ellipse(300, 250, 75, 75);
+pop();
 
 }
