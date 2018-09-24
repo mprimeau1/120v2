@@ -17,8 +17,14 @@ function setup(){
 
     }
 
-
 // Penguin body
+
+  push();
+
+   // make the penquin follow the mouse.
+  translate( mouseX, mouseY );
+  pop();
+
   push();
 
 
