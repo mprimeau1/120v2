@@ -4,10 +4,23 @@ function setup(){
     createCanvas( 600,600 );
 
     background('blue');
+    noCursor();
+    translate( mouseX, mouseY );
+
+    function setup(){
+      frameRate(20); //20 frames per second
+    }
+    function draw(){
+      var fr = frameRate();
+      print(fr);
+
+    }
+    push();
+
 
 // Penguin body
-
 push();
+
 
 fill('black');
 ellipse(300, 350, 75, 275);
@@ -74,6 +87,7 @@ pop();
 
 //arm left
 
+
 push();
 strokeWeight(25);
 line(265,285,265,390);
@@ -111,6 +125,6 @@ fill('red');
 ellipse(400,160,80,80);
 pop();
 
-
+pop();
 
 }
