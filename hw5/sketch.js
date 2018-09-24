@@ -72,16 +72,21 @@ fill('black');
 ellipse(287,250,5,5);
 pop();
 
-//arms
+//arm left
 
 push();
 fill('black');
 ellipse(262, 375, 30, 200);
 pop();
 
+//arm right
+
 push();
 fill('black');
-ellipse(338, 375, 30, 200);
+ellipse(338, 320, 25, 100);
+strokeWeight(20);
+line(345,332,370,350);
+
 pop();
 
 //feet
@@ -89,7 +94,7 @@ pop();
 push();
 strokeWeight(15);
 fill('orange');
-ellipse(300, 475, 75, 40);
+ellipse(300, 475, 75, 20);
 pop();
 
 
