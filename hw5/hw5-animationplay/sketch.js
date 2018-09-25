@@ -8,20 +8,13 @@ function draw(){
 //background
     background('blue');
     noCursor();
-    push();
-//balloon
     translate(mouseX, mouseY);
-    fill('red');
-    ellipse(mouseX,mouseY,80);
-    strokeWeight(2);
-    line(400,175,400,330);
-    
+
 // penquin body
 
   push();
-
   fill('black');
-  ellipse(300, 350, 75, 275);
+  ellipse(300,350, 75, 275);
   pop();
 
   push();
@@ -109,5 +102,20 @@ function draw(){
   fill('orange');
   ellipse(300, 475, 75, 20);
   pop();
+
+  //balloon string
+
+    push();
+    strokeWeight(2);
+    line(400,175,400,330);
+    pop();
+
+  //balloon
+
+    push();
+    fill('red');
+    ellipse(400,160,80,80);
+    pop();
+
 }
 // End of penguin body
