@@ -2,23 +2,29 @@ function setup(){
 
 //background
     createCanvas( 600,600 );
-    let angle = 0;
     background('blue');
     noCursor();
 
-    function setup(){
-      frameRate(20); //20 frames per second
-    }
     function draw(){
-      var fr = frameRate();
-      print(fr);
-
-    }
 
 // Penguin with balloon
 
-// make the penquin follow the mouse.
-  translate(mouseX, mouseY);
+// make the balloon follow the mouse.
+
+//balloon
+
+
+    translate(mouseX, mouseY);
+    fill('red');
+    ellipse(400,160,80,80);
+
+    //balloon string
+
+    strokeWeight(2);
+    line(400,175,400,330);
+    
+
+}
 
 
 // penquin body
@@ -116,18 +122,6 @@ function setup(){
   ellipse(300, 475, 75, 20);
   pop();
 
-//balloon string
 
-  push();
-  strokeWeight(2);
-  line(400,175,400,330);
-  pop();
-
-//balloon
-
-  push();
-  fill('red');
-  ellipse(400,160,80,80);
-  pop();
 
 }
