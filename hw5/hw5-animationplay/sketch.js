@@ -14,14 +14,12 @@ function setup(){
       print(fr);
 
     }
-    
+
 // Penguin with balloon
 
-  push();
-
 // make the penquin follow the mouse.
-  translate('mouseX, mouseY');
-  pop();
+  translate(mouseX, mouseY);
+
 
 // penquin body
 
