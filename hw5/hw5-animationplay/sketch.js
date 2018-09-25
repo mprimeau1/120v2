@@ -17,13 +17,8 @@ function setup(){
     translate(mouseX, mouseY);
     fill('red');
     ellipse(400,160,80,80);
-
-    //balloon string
-
     strokeWeight(2);
     line(400,175,400,330);
-    
-
 }
 
 
