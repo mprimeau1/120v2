@@ -1,31 +1,24 @@
-function setup(){
-
-//background
-    createCanvas( 600,600 );
-    background('blue');
-    noCursor();
-
-    function draw(){
-
+function setup() {
+    createCanvas( 600, 600 );
+}
 // Penguin with balloon
 
 // make the balloon follow the mouse.
-
+function draw(){
+//background
+    background('blue');
+    noCursor();
+    push();
 //balloon
-
-
     translate(mouseX, mouseY);
     fill('red');
-    ellipse(mouseX,mouseY,80,80);
+    ellipse(mouseX,mouseY,80);
     strokeWeight(2);
     line(400,175,400,330);
-}
-
-
+    
 // penquin body
 
   push();
-
 
   fill('black');
   ellipse(300, 350, 75, 275);
@@ -116,7 +109,5 @@ function setup(){
   fill('orange');
   ellipse(300, 475, 75, 20);
   pop();
-
-
-
 }
+// End of penguin body
