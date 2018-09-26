@@ -13,6 +13,21 @@ function draw(){
 //background
     background('blue');
     noCursor();
+
+// a lonely floating iceburg floating
+
+    push();
+
+    iceX = iceX - 1;
+    iceY = iceY - 0 * 1 ;
+
+    strokeWeight(5);
+    stroke( 'white' );
+    fill( 'lightblue' );
+    rect( iceX, iceY, 75, 75 );
+
+    pop();
+
     translate(mouseX, mouseY);
 
 // Penguin with balloon
@@ -129,17 +144,5 @@ function draw(){
 
 // End of penguin body
 
-// a lonely floating iceburg floating
 
-    push();
-
-    iceX = iceX - 1;
-    iceY = iceY - 0 * 1 ;
-
-    strokeWeight(5);
-    stroke( 'white' );
-    fill( 'lightblue' );
-    rect( iceX, iceY, 75, 75 );
-
-    pop();
   }
