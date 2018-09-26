@@ -1,14 +1,40 @@
 function setup() {
-    createCanvas( 600, 600 );
+    createCanvas( 1000, 800 );
+    frameRate( 60 );
 }
+
+  let loop = 5;
+
+
 // Penguin with balloon
 
 // make the balloon follow the mouse.
+
+// added variables for floating iceburgs
+var iceX = 1000;
+var iceY = 500;
+
 function draw(){
 //background
     background('blue');
     noCursor();
     translate(mouseX, mouseY);
+
+// iceburgs floating
+
+    push();
+
+    iceX = iceX - 1;
+    iceY = iceY - 0 * 1 ;
+
+    strokeWeight(5);
+    stroke( 'white' );
+    fill( 'lightblue' );
+    rect( iceX+4, iceY, 50, 50 );
+    rect( iceX+6, iceY, 25, 25 );
+    rect( iceX+8, iceY, 40, 40 );
+
+        pop();
 
 // penquin body
 
@@ -114,7 +140,7 @@ function draw(){
 
     push();
     fill('red');
-    ellipse(400,160,80,80);
+    ellipse(400,160,80);
     pop();
 
 }

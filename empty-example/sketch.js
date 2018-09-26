@@ -1,19 +1,12 @@
-function setup() {
-    createCanvas( 800, 600 );
-    background( 'blue' );
-}
-
-
-//balloon
-  function draw() {
-  noCursor();
-  fill('red');
-  ellipse(mousex,mousey,80);
-}
-
-//balloon string
-
-    push();
-    strokeWeight(2);
-    line(400,175,400,330);
-    pop();
+// left arm
+push();
+// move the center to facilitate rotate
+translate( -10, -20 );
+// rotate, based on mouseX position
+rotate( radians( mouseX) );
+// draw arm and hand
+line( 0, 0, 150, 0);
+fill( 'rgb(255, 176, 59)' );
+noStroke();
+ellipse( 150, 0, 20 );
+pop();
