@@ -11,28 +11,28 @@ var iceY = 500;
 
 function draw(){
 //background
-    background('blue');
-    noCursor();
+  background('blue');
+  noCursor();
 
-// a lonely floating iceburg floating
+// a lonely floating iceburg floating****************************
 
-    push();
+  push();
 
-    iceX = iceX - 1;
-    iceY = iceY - 0 * 1 ;
+  iceX = iceX - 1;
+  iceY = iceY - 0 * 1 ;
 
-    strokeWeight(5);
-    stroke( 'white' );
-    fill( 'lightblue' );
-    rect( iceX, iceY, 75, 75 );
+  strokeWeight(5);
+  stroke( 'white' );
+  fill( 'lightblue' );
+  rect( iceX, iceY, 75, 75 );
 
-    pop();
+  pop();
 
-    translate(mouseX, mouseY);
+// Penguin with balloon *****************************************
 
-// Penguin with balloon
+// make the balloon follow the mouse
 
-// make the balloon follow the mouse.
+  translate(mouseX, mouseY);
 
 // penquin body
 
