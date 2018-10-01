@@ -6,29 +6,40 @@ function setup() {
 function draw() {
 // set the background color
     background('darkblue');
-    var eSize = 60;
-      var x1 = map(mouseX, 0, width, 0, 25);
+    var pSize = 40; // orginal eSize
+      var x1 = map(mouseX, 0, width, 0, 20);
       var y1 = 200;
       var x2 = sq(x1);
       var y2 = 400;
       var x3 = sq(x2);
       var y3 = 550;
+      var leftU = 5;
+      var rightU = 980;
+      var xK = constrain(mouseX, leftU, rightU);
+
+// Draw the edge of universe
+  push();
+      stroke(100);
+      strokeWeight(30);
+      line(leftU, 0, leftU, height);
+      line(rightU, 0, rightU, height);
+  pop();
 
 // planetA
   push();
       fill('darkgreen');
-      ellipse(x1, y1, eSize, eSize);
+      ellipse(xK, y1, pSize);
   pop();
 
 // planetB
   push();
       fill('purple');
-      ellipse(x2, y2, eSize, eSize);
+      ellipse(x2, y2, pSize*2);
   pop();
 
 //planetC
   push();
       fill('orange');
-      ellipse(x3 ,y3 ,eSize , eSize);
+      ellipse(x3 ,xK ,pSize*3);
   pop();
   }
