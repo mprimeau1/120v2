@@ -10,9 +10,7 @@ function draw() {
       var x1 = map(mouseX, 0, width, 0, 20);
       var y1 = 200;
       var x2 = sq(x1);
-      var y2 = 400;
       var x3 = sq(x2);
-      var y3 = 550;
       var leftU = 5;
       var rightU = 980;
       var xK = constrain(mouseX, leftU, rightU);
@@ -34,7 +32,7 @@ function draw() {
 // planetB
   push();
       fill('purple');
-      ellipse(x2, y2, pSize*2);
+      ellipse(x2, y1 + 350, pSize*2);
   pop();
 
 //planetC
