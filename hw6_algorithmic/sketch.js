@@ -14,13 +14,24 @@ function draw() {
       var x2 = sq(x1);
       var x3 = sq(x2+4);
       var leftU = 5;
-      var rightU = 980;
+      var rightU = 990;
+      var starX = 950;
+      var starY = 550;
       var xK = constrain(mouseX, leftU, rightU);
+//stars
+  push();
+  fill('white');
+  ellipse(starX,starY,5,5);
+  ellipse(starX / 2,starY / 2,5,5);
+  ellipse(starX / 4,starY / 4,5,5);
+
+
+  pop();
 
 
 // Draw the edge of universe
   push();
-      stroke(100);
+      stroke('black');
       strokeWeight(30);
       line(leftU, 0, leftU, height);
       line(rightU, 0, rightU, height);
@@ -40,7 +51,7 @@ function draw() {
 
 //planetC
   push();
-      fill('orange');
+      fill('brown');
       ellipse(x3 ,xK ,pSize*3);
   pop();
 
@@ -58,6 +69,7 @@ function draw() {
   frameRate(30);
   var words = ['cats','hello','egypt','pryamids','oakisland','anasazi'];
   var word = random(words); // select random word
+  fill('orange');
   text(word, 200, 500); // draw the word
   pop();
 
