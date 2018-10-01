@@ -22,6 +22,12 @@ function draw() {
   push();
   fill('white');
   ellipse(starX,starY,5,5);
+  ellipse(starX - 300,starY - 250,5,5);
+  ellipse(starX - 450,starY - 400,5,5);
+  ellipse(starX - 50,starY - 75,5,5);
+  ellipse(starX - 84,starY - 42,5,5);
+  ellipse(starX - 7,starY - 200,5,5);
+  ellipse(starX - 125,starY - 100,5,5);
   ellipse(starX / 2,starY / 2,5,5);
   ellipse(starX / 4,starY / 4,5,5);
   ellipse(starX / 4,starY / 2,5,5);
