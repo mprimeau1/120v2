@@ -1,7 +1,6 @@
 function setup() {
 // create a canvas to draw my portrait on
     createCanvas( 1000, 600 );
-  
 
 }
 
@@ -9,11 +8,11 @@ function setup() {
 function draw() {
 // set the background color
     background('darkblue');
-      var pSize = 40; // orginal eSize
+      var pSize = 40; // orginal pSize
       var x1 = map(mouseX, 0, width, 0, 20);
       var y1 = 200;
       var x2 = sq(x1);
-      var x3 = sq(x2);
+      var x3 = sq(x2+4);
       var leftU = 5;
       var rightU = 980;
       var xK = constrain(mouseX, leftU, rightU);
@@ -52,6 +51,15 @@ function draw() {
     fill('black');
     ellipse(100, i, 100 + r, i);
   pop();
-        }
+  }
+
+// Get a random words from the aliens
+  push();
+  frameRate(30);
+  var words = ['cats','hello','egypt','pryamids'];
+  var word = random(words); // select random word
+  text(word, 200, 500); // draw the word
+  pop();
+        
 
   }
