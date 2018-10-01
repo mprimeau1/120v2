@@ -56,10 +56,10 @@ function draw() {
 // Get a random words from the aliens
   push();
   frameRate(30);
-  var words = ['cats','hello','egypt','pryamids'];
+  var words = ['cats','hello','egypt','pryamids','oakisland','anasazi'];
   var word = random(words); // select random word
   text(word, 200, 500); // draw the word
   pop();
-        
+
 
   }
