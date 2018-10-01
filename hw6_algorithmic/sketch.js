@@ -24,7 +24,19 @@ function draw() {
   ellipse(starX,starY,5,5);
   ellipse(starX / 2,starY / 2,5,5);
   ellipse(starX / 4,starY / 4,5,5);
-
+  ellipse(starX / 4,starY / 2,5,5);
+  ellipse(starX / 2,starY / 4,5,5);
+  ellipse(starX + 60,starY + 52,5,5);
+  ellipse(starX / 2 + 15,starY / 2 + 83,5,5);
+  ellipse(starX / 4 + 47 ,starY / 4 + 8,5,5);
+  ellipse(starX / 4 - 24,starY / 2 + 15,5,5);
+  ellipse(starX / 2 - 26 ,starY / 4 - 45 ,5,5);
+  ellipse(starX / 9, starY / 6,5,5);
+  ellipse(starX / 9 + 35, starY / 6 + 86,5,5);
+  ellipse(starX / 9 + 50, starY / 6 - 52,5,5);
+  ellipse(starX / 9 + 75, starY / 6 - 100,5,5);
+  ellipse(starX / 9 - 65, starY / 6 + 35,5,5);
+  ellipse(starX / 9 - 35, starY / 6 + 45,5,5);
 
   pop();
 
