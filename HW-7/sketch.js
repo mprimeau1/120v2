@@ -1,16 +1,17 @@
 
 
 let ball = {};
-ball.width = 60;
-ball.x = 15;
-ball.y = 15;
-ball.delta_x = 2;
-ball.delta_y = 2;
-ball.scale_x = 2;
-ball.scale_y = 2;
+rectW = 60;
+rectX = 7;
+rectY = 7;
+rectDX = 2;
+rectDY = 8;
+rectSX = 2;
+rectSY = 8;
+
 
 function setup() {
-    createCanvas(windowWidth, 400);
+    createCanvas(windowWidth, 600);
     background('rgb(70, 55, 18)');
 }
 
@@ -18,23 +19,27 @@ function setup() {
 
 function draw() {
 
-    ball.x += ball.delta_x * ball.scale_x;
-    ball.y += ball.delta_y * ball.scale_y;
+    rectX += rectDX * rectSX;
+    rectY += rectDY * rectSY;
 
 
-    if (ball.x >= width || ball.x <= .3) {
-        ball.delta_x = -1 * ball.delta_x;
+    if (rectX >= width || rectX <= .3) {
+        rectDX = -1 * rectDX;
     }
-    if (ball.y >= height || ball.y <= .3) {
-        ball.delta_y = -1 * ball.delta_y;
+    if (rectY >= height || rectY <= .3) {
+        rectDY = -1 * rectDY;
     }
 
-    fill('rgb(242, 96, 34)');
-    rect(ball.x, ball.y, ball.width, ball.width);
+push();
+    fill('red');
+    rect(rectX, rectY, rectW, rectW);
+
 }
 
+
 function mousePressed() {
-    ball.scale_x = map(mouseX, 0, width, 2, 15);
-    ball.scale_y = map(mouseY, 0, height, 2, 15);
+    rectSX = map(mouseX, 0, width, 1, 3);
+    rectSY = map(mouseY, 0, height, 1, 3);
+
 
 }
