@@ -11,6 +11,4 @@ In the original code there is a ball that moves in a zigzag pattern on the scree
 
 ## How did you alter the sketch?
 
-<!--
-Please describe how and why you changed the sketch?
--->
+I altered the sketch by turning the ball into an square that moves around the screen. I also changed the colors and the rate of speeds of the square. When you click the mouse or press the mouse the rate at which the rectangle moves is faster than what is originally on the screen.
