@@ -22,6 +22,8 @@ function draw() {
     rectX += rectDX * rectSX;
     rectY += rectDY * rectSY;
 
+    
+
 
     if (rectX >= width || rectX <= .3) {
         rectDX = -1 * rectDX;
@@ -33,6 +35,7 @@ function draw() {
 push();
     fill('red');
     rect(rectX, rectY, rectW, rectW);
+pop();
 
 }
 
