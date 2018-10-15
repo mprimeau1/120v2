@@ -33,13 +33,17 @@ while ( X <= width){
 }
 // add falling snow
   push();
-  
   let pos_x = 15;
   let pos_y = 15;
   let d = 6;
+  let r = d/2;
 
   fill('white');
+  noStroke();
+  for (Let i = 15; i <25; i++){
+    pos_x = width * i / 25 + r;
   ellipse(pos_x, pos_y, d);
+}
   pop();
 
 
