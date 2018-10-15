@@ -18,15 +18,20 @@ function draw() {
     var K = 500; //center point of triangle
     var F = 515; // center point of triangle2
     var B = 565;
+    var A = 575;
 
 while ( X <= width){
+
+
     triangle(X, L, V, K, G, L);
     triangle(X, B, V, F, G, B);
-    line(V ,B ,V ,575 );
-
+    line(V ,B ,V ,A );
+// move the tree so dupicates across the bottome of the screen
     X = X + 75;
     V = V + 75;
     G = G + 75;
+
 }
+
 
 }
