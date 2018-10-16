@@ -10,14 +10,14 @@ function draw() {
     fill('rgb(2, 29, 3)');
 
 // makes a line of trees on the x value
-    var X = 30;
-    var V = 58;
-    var G = 86;
-    var L = 550;
-    var K = 500; //center point of triangle
-    var F = 515; // center point of triangle2
-    var B = 565;
-    var A = 575;
+    let X = 30;
+    let V = 58;
+    let G = 86;
+    let L = 550;
+    let K = 500; //center point of triangle
+    let F = 515; // center point of triangle2
+    let B = 565;
+    let A = 575;
 
 while ( X <= width){
 
@@ -32,7 +32,7 @@ while ( X <= width){
     G = G + 75;
 }
 // add falling snow
-  push();
+
   let pos_x = 0;
   let pos_y = 0;
   let d = 6;
@@ -41,7 +41,11 @@ for (let i = 0; i < 35; i++) {
   pos_x = width * i / 35 + r;
   fill('white');
   ellipse(pos_x, pos_y, d);}
-  pop();
+  pos_y++;
+if (pos_y > height) {
+    pos_y = pos_y + 3;
+}
+
 
 
 
