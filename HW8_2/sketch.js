@@ -7,6 +7,7 @@ function draw() {
 // make the background a dark blue color
     background('rgb(10, 9, 51)');
 
+
 // make the trees green
     fill('rgb(2, 29, 3)');
 
@@ -38,17 +39,21 @@ while ( X <= width){
 }
 // add falling snow
 
-    fill('white');
-
-
-// USE A LOOP ****************************
-
-    for (var i = 0; i < 35; i++) {
-// find the x_pos
-        pos_x = width * i / 35 + r;
+// snow falling ***********************************
 // draw the snow flakes
-        ellipse(pos_x, pos_y, d);
-    }
+    fill('white');
+    // USE A LOOP ****************************
+
+        for (var i = 0; i < 35; i++){
+          for (let x = 20; x <= width-10; x += density) {
+
+
+    // find the x_pos
+            pos_x = width * i / 35 + r;
+    ellipse(pos_x, pos_y, d);
+}
+
+}
 
     pos_y++;
     if (pos_y > height) {
