@@ -1,6 +1,6 @@
 Mary Primeau
 
-[Live Sketch Link](https://mprimeau1.github.io/120v2/HW7/index.html)
+[Live Sketch Link](https://mprimeau1.github.io/120v2/HW8/index.html)
 
 
 # HW 7 | Describe then Alter the Bouncing Ball
