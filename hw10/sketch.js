@@ -18,7 +18,15 @@ function draw(){
   penguin();
   iceburg();
   balloonRED();
+  snow();
 }
+//begin new function snow falling *******************************
+function snow(){
+  push();
+  ellipse(10,10,5);
+  pop();
+}
+// End snow falling
 
 // begin new function iceburg ***********************************
 // 3 floating iceburgs  moving across bottom on screen***********
