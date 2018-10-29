@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas( 1000, 600 );
+    createCanvas(windowWidth,windowHeight);
     frameRate( 40 );
 }
 
@@ -20,9 +20,13 @@ function draw(){
   balloonRED();
   snow();
 }
-//begin new function snow falling *******************************
+
+//begin new function snow *******************************
+// snow flashing random snow colors
 function snow(){
   push();
+  strokeWeight(0);
+  fill('rgb(230, 155, 190)');
   ellipse(10,10,5);
   pop();
 }
