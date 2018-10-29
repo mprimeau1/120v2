@@ -19,12 +19,35 @@ function draw(){
   iceburg();
   balloonRED();
 }
+
+// begin new function iceburg ***********************************
+// 3 floating iceburgs  moving across bottom on screen***********
+function iceburg(){
+
+  push();
+
+  iceX = iceX - 1;
+  iceY = iceY - 0 * 1 ;
+
+  strokeWeight(5);
+  stroke( 'white' );
+  fill( 'rgb(27, 180, 185)' );
+  rect( iceX, iceY, 75, 75 ); // first iceburg
+  rect( iceX - 350 , iceY - 60, 100, 100 ); // second iceburg
+  rect( iceX - 550 , iceY - 90, 50, 50 ); // third iceburg
+
+  pop();
+
+}
+
+
 //begin new function penguin ************************************
 function penguin(){
 
 // Penguin with balloon *****************************************
 
 // penquin body
+
 
   push();
   fill('black');
@@ -55,7 +78,7 @@ function penguin(){
 //nose
   push();
 
-  fill('orange');
+  fill('rgb(222, 91, 7)');
   triangle(300, 260, 290, 270, 310, 270);
 
   pop();
@@ -113,7 +136,7 @@ function penguin(){
 
   push();
   strokeWeight(15);
-  fill('orange');
+  fill('rgb(222, 91, 7)');
   ellipse(300, 475, 75, 20);
   pop();
 // end body
@@ -142,22 +165,5 @@ function balloonRED(){
 
 //end balloon
 
-
-}
-// begin new function iceburg ***********************************
-// a lonely floating iceburg floating****************************
-function iceburg(){
-
-  push();
-
-  iceX = iceX - 1;
-  iceY = iceY - 0 * 1 ;
-
-  strokeWeight(5);
-  stroke( 'white' );
-  fill( 'rgb(27, 180, 185)' );
-  rect( iceX, iceY, 75, 75 );
-
-  pop();
 
 }
