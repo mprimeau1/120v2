@@ -24,11 +24,16 @@ function draw(){
 //begin new function snow *******************************
 // snow flashing random snow colors
 function snow(){
-  push();
-  strokeWeight(0);
-  fill('rgb(230, 155, 190)');
-  ellipse(10,10,5);
-  pop();
+  let density = map(mouseX, 0, width, 20, 60);
+  fill('white');
+  // Make a loop of moving snow with mouse
+  for (let k = 20; k <= width-10; k += density) {
+    for (let h = 20; h <= height-10; h+=density) {
+  // draw orbs
+  ellipse(k , h ,5 );
+
+    }
+  }
 }
 // End snow falling
 
