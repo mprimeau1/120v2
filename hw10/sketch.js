@@ -1,27 +1,39 @@
 function setup() {
+// create a canvas the size of the screen
     createCanvas(windowWidth,windowHeight);
     frameRate( 40 );
 }
-
+//make variables
   let loop = 5;
 
 // added variables for floating iceburg
   let iceX = 1000;
   let iceY = 500;
-// add color varriables for snow
+// add color varriables for blinking snow
   let colors = ['rgb(236, 116, 230)', 'rgb(115, 235, 235)', 'rgb(255, 156, 149)', 'rgb(255, 255, 255)', 'rgb(195, 255, 219)'];
 // add colors for iceburgs
   let iceCOLOR = ['rgb(120, 134, 148)','rgb(106, 200, 217)','rgb(89, 147, 147)']
+
+
 function draw(){
-//background
+//make the background blue
   background('rgb(21, 24, 79)');
   noCursor();
 
 // label the new functions
-  penguin();
   iceburg();
   balloonRED();
   snow();
+// penquin 1
+  penguin(5,5,1.0,1.0);
+// penguin 2
+  penguin(100,-250,1.5,1.5);
+// penguin 3
+  penguin(350,150,.75,.75);
+// penguin 4
+  penguin(200,65,1.0,1.0);
+// penguin
+    penguin(300,350,.25,.25);
 }
 
 //begin new function snow *******************************
@@ -63,12 +75,14 @@ function iceburg(){
 
 
 //begin new function penguin ************************************
-function penguin(){
+function penguin( pos_x, pos_y, scale_x, scale_y ){
 
 // Penguin with balloon *****************************************
+// scale and position
+translate( pos_x, pos_y );
+scale( scale_x, scale_y );
 
 // penquin body
-
 
   push();
   fill('black');
