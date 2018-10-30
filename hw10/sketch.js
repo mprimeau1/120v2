@@ -4,7 +4,7 @@ function setup() {
     frameRate( 40 );
 }
 //make variables
-  let loop = 5;
+  let loop = 30;
 
 // added variables for floating iceburg
   let iceX = 1000;
@@ -76,17 +76,18 @@ function snow(){
 function iceburg(){
 
   push();
-
+  let result = iceX + iceY;
   iceX = iceX - 1;
   iceY = iceY - 0 * 1 ;
 
   strokeWeight(5);
   stroke(random(iceCOLOR));
   fill(random(iceCOLOR));
-  rect( iceX, iceY, 75, 75 ); // first iceburg
+  rect( iceX, iceY, 75, 75 ); // first iceburf
   rect( iceX - 350 , iceY - 60, 100, 100 ); // second iceburg
   rect( iceX - 550 , iceY - 90, 50, 50 ); // third iceburg
-
+  //  Return the value
+  return result;
   pop();
 
 }
@@ -150,7 +151,7 @@ function penguin( pos_x, pos_y, scale_x, scale_y ){
   push();
   strokeWeight(1);
   stroke('black');
-  fill('white');
+  fill('white')
   ellipse(312,250,15,15);
   pop();
 
@@ -233,6 +234,7 @@ function balloonRED(pos_x, pos_y, scale_x, scale_y){
   push();
   fill('red');
   stroke('black');
+  strokeWeight(2);
   ellipse(400,160,80);
   pop();
 
