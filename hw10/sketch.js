@@ -8,6 +8,8 @@ function setup() {
 // added variables for floating iceburg
   let iceX = 1000;
   let iceY = 500;
+// add color varriables for snow
+let colors = ['rgb(236, 116, 230)', 'rgb(115, 235, 235)', 'rgb(255, 156, 149)', 'rgb(255, 255, 255)', 'rgb(195, 255, 219)'];
 
 function draw(){
 //background
@@ -22,14 +24,15 @@ function draw(){
 }
 
 //begin new function snow *******************************
-// snow flashing random snow colors
+// snow moving with mouse functions
 function snow(){
   let density = map(mouseX, 0, width, 20, 60);
-  fill('white');
-  // Make a loop of moving snow with mouse
+  fill(random(colors));
+  stroke(random(colors));
+// Make a loop of moving snow with mouse
   for (let k = 20; k <= width-10; k += density) {
     for (let h = 20; h <= height-10; h+=density) {
-  // draw orbs
+// draw snow
   ellipse(k , h ,5 );
 
     }
@@ -68,11 +71,13 @@ function penguin(){
 
   push();
   fill('black');
+  stroke('black');
   ellipse(300,350, 75, 275);
   pop();
 
   push();
   fill('white');
+  stroke('black');
   ellipse(300, 350, 60, 175);
 
   pop();
@@ -83,18 +88,20 @@ function penguin(){
   push();
 
   fill('black');
+  stroke('black');
   ellipse(300, 250, 75, 75);
   pop();
 
   push();
 
   fill('white');
+  stroke('black');
   ellipse(300, 260, 63, 63);
   pop();
 
 //nose
   push();
-
+  stroke('black');
   fill('rgb(222, 91, 7)');
   triangle(300, 260, 290, 270, 310, 270);
 
@@ -104,31 +111,37 @@ function penguin(){
 
   push();
   strokeWeight(2);
+  stroke('black');
   ellipse(287,250,15,15);
   pop();
 
   push();
   strokeWeight(2);
+  stroke('black');
   ellipse(312,250,15,15);
   pop();
 
   push();
   fill('blue');
+  stroke('black');
   ellipse(287,250,10,10);
   pop();
 
   push();
   fill('blue');
+  stroke('black');
   ellipse(312,250,10,10);
   pop();
 
   push();
   fill('black');
+  stroke('black');
   ellipse(312,250,5,5);
   pop();
 
   push();
   fill('black');
+  stroke('black');
   ellipse(287,250,5,5);
   pop();
 
@@ -136,6 +149,7 @@ function penguin(){
 
   push();
   strokeWeight(25);
+  stroke('black');
   line(265,285,265,390);
   pop();
 
@@ -143,8 +157,10 @@ function penguin(){
 
   push();
   strokeWeight(25);
+  stroke('black');
   line(340,285,340,365);
   strokeWeight(20);
+  stroke('black');
   line(342,365,390,330);
 
   pop();
@@ -153,6 +169,7 @@ function penguin(){
 
   push();
   strokeWeight(15);
+  stroke('black');
   fill('rgb(222, 91, 7)');
   ellipse(300, 475, 75, 20);
   pop();
@@ -169,6 +186,7 @@ function balloonRED(){
 
     push();
     strokeWeight(2);
+    stroke('black');
     line(400,175,400,330);
     pop();
 
@@ -176,6 +194,7 @@ function balloonRED(){
 
     push();
     fill('red');
+    stroke('black');
     ellipse(400,160,80);
     pop();
 
