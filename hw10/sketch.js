@@ -21,9 +21,12 @@ function draw(){
   noCursor();
 
 // label the new functions
+//iceburg Functions
   iceburg();
-  balloonRED();
+
+//snow  function
   snow();
+
 // penquin 1
   penguin(5,5,1.0,1.0);
 // penguin 2
@@ -32,8 +35,17 @@ function draw(){
   penguin(350,150,.75,.75);
 // penguin 4
   penguin(200,65,1.0,1.0);
-// penguin
-    penguin(300,350,.25,.25);
+// penguin 5
+  penguin(300,350,.25,.25);
+// penguin 6
+  penguin(-800,250,.75,.75);
+
+// baloon 6
+    balloonRED(1,1,1.0,1.0);
+// baloon 5
+    balloonRED(800,-550,2.0,2.0);
+// baloon 4
+    balloonRED(-425,-625,2.0,2.0);
 }
 
 //begin new function snow *******************************
@@ -194,24 +206,25 @@ scale( scale_x, scale_y );
 
 //begin new fuction of balloon *********************************
 
-function balloonRED(){
+function balloonRED(pos_x, pos_y, scale_x, scale_y){
 // Balloon with string *****************************************
-
+  translate( pos_x, pos_y );
+  scale( scale_x, scale_y );
 // string
 
-    push();
-    strokeWeight(2);
-    stroke('black');
-    line(400,175,400,330);
-    pop();
+  push();
+  strokeWeight(2);
+  stroke('black');
+  line(400,175,400,330);
+  pop();
 
 //balloon
 
-    push();
-    fill('red');
-    stroke('black');
-    ellipse(400,160,80);
-    pop();
+  push();
+  fill('red');
+  stroke('black');
+  ellipse(400,160,80);
+  pop();
 
 
 //end balloon
