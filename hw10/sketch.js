@@ -46,6 +46,10 @@ function draw(){
     balloonRED(800,-550,2.0,2.0);
 // baloon 4
     balloonRED(-425,-625,2.0,2.0);
+// baloon 3
+    balloonRED(-265,-90,1.0,1.0);
+// baloon 2
+    balloonRED(-650,-290,1.5,1.5);
 }
 
 //begin new function snow *******************************
