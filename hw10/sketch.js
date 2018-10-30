@@ -12,7 +12,7 @@ function setup() {
 // add color varriables for blinking snow
   let colors = ['rgb(236, 116, 230)', 'rgb(115, 235, 235)', 'rgb(255, 156, 149)', 'rgb(255, 255, 255)', 'rgb(195, 255, 219)'];
 // add colors for iceburgs
-  let iceCOLOR = ['rgb(120, 134, 148)','rgb(106, 200, 217)','rgb(89, 147, 147)']
+  let iceCOLOR = ['rgb(120, 134, 148)','rgb(106, 200, 217)','rgb(89, 147, 147)'];
 
 
 function draw(){
@@ -50,6 +50,8 @@ function draw(){
     balloonRED(-265,-90,1.0,1.0);
 // baloon 2
     balloonRED(-650,-290,1.5,1.5);
+// baloon 1
+    balloonRED(-135,155,.75,.75);
 }
 
 //begin new function snow *******************************
@@ -59,8 +61,8 @@ function snow(){
   fill(random(colors));
   stroke(random(colors));
 // Make a loop of moving snow with mouse
-  for (let k = 20; k <= width-10; k += density) {
-    for (let h = 20; h <= height-10; h+=density) {
+  for (let k = 5; k <= width-10; k += density) {
+    for (let h = 5; h <= height-10; h+=density) {
 // draw snow
   ellipse(k , h ,5 );
 
@@ -95,8 +97,8 @@ function penguin( pos_x, pos_y, scale_x, scale_y ){
 
 // Penguin with balloon *****************************************
 // scale and position
-translate( pos_x, pos_y );
-scale( scale_x, scale_y );
+  translate( pos_x, pos_y );
+  scale( scale_x, scale_y );
 
 // penquin body
 
@@ -113,18 +115,17 @@ scale( scale_x, scale_y );
 
   pop();
 
-//head
-
+//head*************************************************************
 
   push();
-
+  strokeWeight(1);
   fill('black');
   stroke('black');
   ellipse(300, 250, 75, 75);
   pop();
 
   push();
-
+  strokeWeight(1);
   fill('white');
   stroke('black');
   ellipse(300, 260, 63, 63);
@@ -132,47 +133,52 @@ scale( scale_x, scale_y );
 
 //nose
   push();
+  strokeWeight(1);
   stroke('black');
   fill('rgb(222, 91, 7)');
   triangle(300, 260, 290, 270, 310, 270);
-
   pop();
 
 //eyes
-
   push();
-  strokeWeight(2);
+  strokeWeight(1);
   stroke('black');
+  fill('white');
   ellipse(287,250,15,15);
   pop();
 
   push();
-  strokeWeight(2);
+  strokeWeight(1);
   stroke('black');
+  fill('white');
   ellipse(312,250,15,15);
   pop();
 
   push();
-  fill('blue');
+  strokeWeight(1);
   stroke('black');
+  fill('blue');
   ellipse(287,250,10,10);
   pop();
 
   push();
-  fill('blue');
+  strokeWeight(1);
   stroke('black');
+  fill('blue');
   ellipse(312,250,10,10);
   pop();
 
   push();
-  fill('black');
+  strokeWeight(1);
   stroke('black');
+  fill('black');
   ellipse(312,250,5,5);
   pop();
 
   push();
-  fill('black');
+  strokeWeight(1);
   stroke('black');
+  fill('black');
   ellipse(287,250,5,5);
   pop();
 
