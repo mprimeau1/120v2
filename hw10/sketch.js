@@ -9,8 +9,9 @@ function setup() {
   let iceX = 1000;
   let iceY = 500;
 // add color varriables for snow
-let colors = ['rgb(236, 116, 230)', 'rgb(115, 235, 235)', 'rgb(255, 156, 149)', 'rgb(255, 255, 255)', 'rgb(195, 255, 219)'];
-
+  let colors = ['rgb(236, 116, 230)', 'rgb(115, 235, 235)', 'rgb(255, 156, 149)', 'rgb(255, 255, 255)', 'rgb(195, 255, 219)'];
+// add colors for iceburgs
+  let iceCOLOR = ['rgb(120, 134, 148)','rgb(106, 200, 217)','rgb(89, 147, 147)']
 function draw(){
 //background
   background('rgb(21, 24, 79)');
@@ -50,8 +51,8 @@ function iceburg(){
   iceY = iceY - 0 * 1 ;
 
   strokeWeight(5);
-  stroke( 'white' );
-  fill( 'rgb(27, 180, 185)' );
+  stroke(random(iceCOLOR));
+  fill(random(iceCOLOR));
   rect( iceX, iceY, 75, 75 ); // first iceburg
   rect( iceX - 350 , iceY - 60, 100, 100 ); // second iceburg
   rect( iceX - 550 , iceY - 90, 50, 50 ); // third iceburg
