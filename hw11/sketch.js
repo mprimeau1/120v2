@@ -4,12 +4,12 @@ let insides = ['rgb(106, 122, 133)','rgb(37, 71, 29)'];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    let b = new Frog(width/2, height/2, 15);
+    let b = new Frog(width/2, height/2, 40);
     frogs.push(b);
 }
 
 function mouseDragged() {
-    let r = random(5, 75);
+    let r = random(40, 100);
     let b = new Frog(mouseX, mouseY, r);
     frogs.push(b);
 }
@@ -31,6 +31,9 @@ class Frog {
         this.eyeX = x;
         this.eyeY = y;
         this.eyeR = r;
+        this.mouthX = x;
+        this.mouthY = y;
+        this.mouthR = r;
     }
 
     move() {
@@ -38,8 +41,11 @@ class Frog {
         this.x = this.x + random(-10, 10);
         this.y = this.y + random(-10, 10);
 // make it so the eyes move with the body
-        this.eyeX = this.x + random(-5, 5);
-        this.eyeY = this.y + random(-5, 5);
+        this.eyeX = this.x;
+        this.eyeY = this.y;
+// make the mouth move with frog body
+        this.mouthX = this.x;
+        this.mouthY =  this.y;
     }
   show() {
 
@@ -51,8 +57,20 @@ class Frog {
     ellipse(this.x, this.y, this.r);
 
 //eyes
+push();
+    stroke(random(colors));
+    strokeWeight(4);
+    fill(random(insides));
     ellipse(this.eyeX - 15, this.eyeY - 20, this.eyeR /2);
     ellipse(this.eyeX + 15, this.eyeY - 20, this.eyeR /2);
+pop();
+// mouth make open and shut ellipse
+push();
+    strokeWeight(2);
+    stroke('black');
+    fill('black');
+    ellipse(this.mouthX, this.mouthY +15, this.mouthR / 4);
+pop();
 
     }
 }
