@@ -7,8 +7,8 @@ function setup() {
     let b = new Frog(width/2, height/2, 40);
     frogs.push(b);
 }
-// make it so when the mouse is pressed and dragged frog face apears
-function mouseDragged() {
+// make it so when the mouse is moved frog face moves
+function mouseMoved() {
     let r = random(40, 100);
     let b = new Frog(mouseX, mouseY, r);
     frogs.push(b);
@@ -16,11 +16,18 @@ function mouseDragged() {
 
 function draw() {
     background('rgb(203, 132, 11)');
+
+
+// make it so an infinate number of frog faces appear
+
+
     for (let i = 0; i < frogs.length; i++) {
         frogs[i].move();
         frogs[i].show();
     }
 }
+
+// frog face class
 
 class Frog {
     constructor(x, y, r) {
@@ -49,7 +56,7 @@ class Frog {
     }
   show() {
 
-//frog body
+//frog face
 
     stroke(random(colors));
     strokeWeight(4);
@@ -57,6 +64,7 @@ class Frog {
     ellipse(this.x, this.y, this.r);
 
 //eyes
+
 push();
     stroke(random(colors));
     strokeWeight(4);
@@ -64,7 +72,9 @@ push();
     ellipse(this.eyeX - 15, this.eyeY - 20, this.eyeR /2);
     ellipse(this.eyeX + 15, this.eyeY - 20, this.eyeR /2);
 pop();
-// mouth make open and shut ellipse
+
+// mouth make open
+
 push();
     strokeWeight(2);
     stroke('black');
