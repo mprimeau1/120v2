@@ -37,9 +37,9 @@ class Frog {
     }
 
     move() {
-// make the frog body move
+// make the frog face bounce mostly up and down
         this.x = this.x + random(-10, 10);
-        this.y = this.y + random(-10, 10);
+        this.y = this.y + random(-50, 50);
 // make it so the eyes move with the body
         this.eyeX = this.x;
         this.eyeY = this.y;
