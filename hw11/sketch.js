@@ -1,13 +1,13 @@
 let frogs = [];
-let colors = ['rgb(219, 237, 15)','rgb(107, 27, 16)','rgb(113, 87, 112)','rgb(40, 54, 75)','rgb(81, 138, 37)','rgb(79, 64, 67)'];
-let insides = ['rgb(106, 122, 133)','rgb(37, 71, 29)'];
+let colors = ['rgb(219, 237, 15)','rgb(19, 238, 0)','rgb(17, 41, 20)','rgb(40, 54, 75)','rgb(81, 138, 37)','rgb(79, 64, 67)'];
+let insides = ['rgb(37, 70, 34)','rgb(25, 66, 24)','rgb(75, 87, 17)','rgb(5, 162, 89)'];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
     let b = new Frog(width/2, height/2, 40);
     frogs.push(b);
 }
-
+// make it so when the mouse is pressed and dragged frog face apears
 function mouseDragged() {
     let r = random(40, 100);
     let b = new Frog(mouseX, mouseY, r);
