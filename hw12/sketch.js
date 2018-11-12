@@ -11,23 +11,23 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 
 // create a new ball object of class type "Ball"
-    let init_x = 80;
-    let init_y = 80;
+    let init_x = 20;
+    let init_y = 60;
     for (let i = 0; i < numOfBalls; i++) {
         balls.push(new Ball(init_x, init_y));
 // move the starting position over
 // This is to ensure that the balls do not start
 // "on top" of each other
-        init_x += 100;
+        init_x += 50;
         if (init_x > width) {
-            init_x = 80;
-            init_y += 100;
+            init_x = 30;
+            init_y += 50;
         }
     }
 }
 
 function draw() {
-    background('rgb(66, 57, 66)');
+    background('black');
 
     for (let i = 0; i < balls.length; i++) {
 // call the ball's methods
@@ -42,10 +42,12 @@ function draw() {
 //      BALL CLASS DEFINITION
 //////////////////////////////////////////////////
 class Ball {
-    constructor(x, y, size) {
+    constructor(x, y, w, h) {
         this.color = 'rgb(102, 3, 180)';
-        this.size = random(10, 75);
-        this.rad = this.size / 4;
+        this.sizeA = random(25, 50);
+        this.sizeB = random(10 ,100);
+        this.radA = this.sizeA / 4;
+        this.radB = this.sizeB / 2;
         this.posX = x;
         this.posY = y;
         this.deltaX = random(-10, 10);
@@ -60,7 +62,7 @@ class Ball {
         fill(this.color);
 // set the position of the ball
         translate(this.posX, this.posY);
-        ellipse(0, 0, this.size);
+        ellipse(0, 0, this.sizeA, this.sizeB);
         pop();
     }
 
@@ -71,36 +73,35 @@ class Ball {
 
     edgeCheck() {
 // check if the ball has hit a vertical wall (left or right walls)
-        if (this.posX + this.rad >= width || this.posX - this.rad <= 0) {
+        if (this.posX + this.radA >= width || this.posX - this.radA <= 0) {
             this.deltaX *= -1;
             this.color = 'rgb(34, 62, 24)';
         }
 // check if the ball has hit a horizontal wall (top or bottom walls)
-        if (this.posY + this.rad >= height || this.posY - this.rad <= 0) {
+        if (this.posY + this.radB >= height || this.posY - this.radB <= 0) {
             this.deltaY *= -1;
             this.color = 'rgb(94, 98, 13)';
         }
     }
 
 
-    ballCheck(otherBalls, myId) {
+    ballCheck(otherBalls, JX) {
 // for loop touches each of the balls in the array
       for (let n = 0; n < otherBalls.length; n++) {
-// if n != myId, then check for touching
-// otherwise, its ME and we need to skip
-        if (n != myId) {
+// if n != JX, then check for touching
+        if (n != JX) {
         let d = dist(this.posX, this.posY, otherBalls[n].posX, otherBalls[n].posY);
-        let combinedR = this.rad + otherBalls[n].rad;
+        let combinedR = this.radA + otherBalls[n].radA;
 
         if (d <= combinedR) {
         this.deltaX *= -1;
         this.deltaY *= -1;
 
 // flip the color
-        if( this.color == 'rgb(237, 36, 232)') {
-            this.color = 'rgb(16, 224, 231)';
+        if( this.color == 'rgb(45, 82, 81)') {
+            this.color = 'rgb(57, 38, 40)';
       } else {
-            this.color = 'rgb(237, 36, 232)';
+            this.color = 'rgb(45, 82, 81)';
                     }
                 }
             }
