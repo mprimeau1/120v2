@@ -4,15 +4,15 @@
 
 // create a variable for the ball object
 let balls = [];
-const numOfBalls = 20;
+const numOfBalls = 50;
 
 function setup() {
-    // createCanvas(windowWidth, windowHeight);
-    createCanvas(windowWidth, 800);
+// createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight);
 
-    // create a new ball object of class type "Ball"
-    let init_x = 60;
-    let init_y = 60;
+// create a new ball object of class type "Ball"
+    let init_x = 80;
+    let init_y = 80;
     for (let i = 0; i < numOfBalls; i++) {
         balls.push(new Ball(init_x, init_y));
 // move the starting position over
@@ -20,7 +20,7 @@ function setup() {
 // "on top" of each other
         init_x += 100;
         if (init_x > width) {
-            init_x = 60;
+            init_x = 80;
             init_y += 100;
         }
     }
@@ -43,22 +43,22 @@ function draw() {
 //////////////////////////////////////////////////
 class Ball {
     constructor(x, y, size) {
-        this.color = 'red';
-        this.size = random(20, 80);
-        this.rad = this.size / 2;
+        this.color = 'rgb(102, 3, 180)';
+        this.size = random(10, 75);
+        this.rad = this.size / 4;
         this.posX = x;
         this.posY = y;
-        this.deltaX = random(-5, 5);
-        this.deltaY = random(-5, 5);
+        this.deltaX = random(-10, 10);
+        this.deltaY = random(-10, 10);
     }
 
     display() {
         push();
-        // remove the balls outer stroke
+// remove the balls outer stroke
         noStroke();
-        // set the balls fill color
+// set the balls fill color
         fill(this.color);
-        // set the position of the ball
+// set the position of the ball
         translate(this.posX, this.posY);
         ellipse(0, 0, this.size);
         pop();
@@ -73,12 +73,12 @@ class Ball {
 // check if the ball has hit a vertical wall (left or right walls)
         if (this.posX + this.rad >= width || this.posX - this.rad <= 0) {
             this.deltaX *= -1;
-            this.color = 'rgb(110, 240, 158)';
+            this.color = 'rgb(34, 62, 24)';
         }
 // check if the ball has hit a horizontal wall (top or bottom walls)
         if (this.posY + this.rad >= height || this.posY - this.rad <= 0) {
             this.deltaY *= -1;
-            this.color = 'rgb(110, 240, 158)';
+            this.color = 'rgb(94, 98, 13)';
         }
     }
 
