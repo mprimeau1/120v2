@@ -2,7 +2,7 @@
 // Week 12
 
 
-// create a variable for the ball object
+
 let balls = [];
 const numOfBalls = 50;
 
@@ -15,9 +15,7 @@ function setup() {
     let init_y = 60;
     for (let i = 0; i < numOfBalls; i++) {
         balls.push(new Ball(init_x, init_y));
-// move the starting position over
-// This is to ensure that the balls do not start
-// "on top" of each other
+// move the starting postion
         init_x += 50;
         if (init_x > width) {
             init_x = 30;
@@ -38,9 +36,9 @@ function draw() {
     }
 }
 
-//////////////////////////////////////////////////
-//      BALL CLASS DEFINITION
-//////////////////////////////////////////////////
+//*****************************************************************************
+//***     BALL CLASS      *****************************************************
+//*****************************************************************************
 class Ball {
     constructor(x, y, w, h) {
         this.color = 'rgb(102, 3, 180)';
@@ -56,6 +54,7 @@ class Ball {
 
     display() {
         push();
+
 // remove the balls outer stroke
         noStroke();
 // set the balls fill color
@@ -64,6 +63,7 @@ class Ball {
         translate(this.posX, this.posY);
         ellipse(0, 0, this.sizeA, this.sizeB);
         pop();
+
     }
 
     move() {
@@ -72,13 +72,13 @@ class Ball {
     }
 
     edgeCheck() {
-// check if the ball has hit a vertical wall (left or right walls)
-        if (this.posX + this.radA >= width || this.posX - this.radA <= 0) {
+// if the ball hits a vertical wall then change the color to green
+        if (this.posX + this.radA >= width || this.posX - this.radA <= 1) {
             this.deltaX *= -1;
             this.color = 'rgb(34, 62, 24)';
         }
-// check if the ball has hit a horizontal wall (top or bottom walls)
-        if (this.posY + this.radB >= height || this.posY - this.radB <= 0) {
+// if the ball hits a hortizal wall then change the color to mustard yellow
+        if (this.posY + this.radB >= height || this.posY - this.radB <= 1) {
             this.deltaY *= -1;
             this.color = 'rgb(94, 98, 13)';
         }
