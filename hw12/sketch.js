@@ -61,7 +61,7 @@ class Ball {
         fill(this.color);
 // set the position of the ball
         translate(this.posX, this.posY);
-        ellipse(0, 0, this.sizeA, this.sizeB);
+        rect(0, 0, this.sizeA, this.sizeB);
         pop();
 
     }
