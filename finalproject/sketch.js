@@ -1,14 +1,14 @@
 let img;
 
-function preload() {
-    img = loadImage('./images/background1.jpg');
+function preload(){
+  img = loadImage("./images/background1.jpg")
 }
-
 function setup() {
-    createCanvas( 600,400 );
+      createCanvas( 610,410 );
 }
 
 
 function draw() {
-  background( 'img' );
+  background( 'black' );
+  image(img,10,10);
 }
