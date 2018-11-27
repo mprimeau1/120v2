@@ -1,14 +1,27 @@
-let img;
-
+let bg1;
+let bg2;
+let bg3;
+let bg4;
 function preload(){
-  img = loadImage("./images/background1.jpg")
+  bg1 = loadImage("./images/background1.jpg")
+  bg2 = loadImage("./images/background2.jpg")
+  bg3 = loadImage("./images/background3.jpg")
+  bg4 = loadImage("./images/background4.jpg")
+
 }
 function setup() {
-      createCanvas( 610,410 );
+// set frame rate 4 frames second
+  frameRate(4);
+      createCanvas( 620,420 );
 }
 
 
 function draw() {
+  var fr = frameRate();
   background( 'black' );
-  image(img,10,10);
+// change image every frame
+  image(bg1,10,10);
+  image(bg2,10,10);
+  image(bg3,10,10);
+  image(bg4,10,10);
 }
