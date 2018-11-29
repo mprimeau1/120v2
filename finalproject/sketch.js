@@ -26,12 +26,12 @@ function draw() {
   forest.animation();
 
 }
-**********************************************
-************** Forest Class ******************
-**********************************************
-class forest {
+
+ //Forest Class
+
+//class forest() {
   constructor(x,y,size){
-    this.bg1 = bg1;
+   this.bg1 = bg1;
     this.bg2 = bg2;
     this.bg3 = bg3;
     this.bg4 = bg4;
