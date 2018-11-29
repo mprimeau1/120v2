@@ -14,7 +14,7 @@ function preload(){
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
-      createCanvas( 620,420 );
+      createCanvas( 600,400 );
 }
 
 
