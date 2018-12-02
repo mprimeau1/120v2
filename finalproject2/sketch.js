@@ -40,10 +40,10 @@ function draw() {
   flowers();
 
 //draw flower 2
-  flowers();
+  flowers(200, 25, .75, .75);
 
 //draw the snow
-  snow();
+//  snow();
 
 }
 
