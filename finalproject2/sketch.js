@@ -2,7 +2,7 @@
 let images = [];
 let imIdx = 0;
 //snow colors
-let colors = ['rgb(236, 116, 230)', 'rgb(115, 235, 235)', 'rgb(255, 156, 149)', 'rgb(255, 255, 255)', 'rgb(195, 255, 219)'];
+let colors = ['rgb(238, 185, 207)', 'white', 'rgb(179, 181, 227)', 'rgb(164, 218, 219)', 'rgb(232, 201, 201)'];
 
 function preload(){
   images[0] = loadImage("./images/background1.jpg")
@@ -34,13 +34,13 @@ function draw() {
 // begin new function snow
 // snow moving with mouse functions
 function snow(){
-  let density = map(mouseX, 0, width, 20, 100);
+  let density = map(mouseX, 0, width, 15, 100);
   fill(random(colors));
   strokeWeight(.5);
   stroke(random(colors));
 // Make a loop of moving snow with mouse
-  for (let k = 3; k <= width-5; k += density) {
-    for (let h = 3; h <= height-5; h+=density) {
+  for (let k = 10; k <= width-5; k += density) {
+    for (let h = 10; h <= height-5; h+=density) {
 // draw snow
   ellipse(k , h ,5 );
 
