@@ -43,7 +43,10 @@ function draw() {
   flowers(200, 25, .75, .75);
 
 //draw the snow
-//  snow();
+  snow();
+
+//draw bird
+  bird();
 
 }
 
@@ -53,17 +56,20 @@ function draw() {
 
 // begin new function snow
 // snow moving with mouse functions
-function snow(){
+function snow(pos_L, pos_M, scale_F, scale_C){
+  // scale and position
+  translate( pos_L, pos_M );
+  scale( scale_F, scale_C );
 
   let density = map(mouseX, 0, width, 15, 100);
   fill(random(colors));
   strokeWeight(.5);
   stroke(random(colors));
 // Make a loop of moving snow with mouse
-  for (let k = 2; k <= width - 5; k += density) {
-    for (let h = 2; h <= height - 5; h +=density) {
+  for (let k = 1; k <= width - 5; k += density) {
+    for (let h = 1; h <= height - 5; h +=density) {
 // draw snow
-  ellipse(k , h ,5 );
+  ellipse(k ,h, 5 ,5 );
 
     }
   }
@@ -147,6 +153,19 @@ function flowers (pos_F, pos_C, scale_F, scale_C){
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////bird function///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+
+function bird (){
+
+//bird body
+  push();
+  stroke('black');
+  strokeWeight(4);
+  fill('rgb(46, 66, 110)');
+  ellipse(350 ,50, 15, 50);
+  pop();
+
+
+}
 
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End bird function//////////////////////////////////
