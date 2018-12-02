@@ -21,6 +21,8 @@ function setup() {
 
 
 function draw() {
+  noCursor();
+
   var fr = frameRate();
 //make background images of forest
   background(images[imIdx]);
@@ -47,6 +49,8 @@ function draw() {
 
 //draw bird
   bird();
+// draw forestMAN
+  forestMAN();
 
 }
 
@@ -145,6 +149,19 @@ function flowers (pos_F, pos_C, scale_F, scale_C){
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////forest man function/////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+
+function forestMAN (){
+
+//forestMAN body
+  push();
+  stroke('black');
+  strokeWeight(4);
+  fill('rgb(241, 149, 28)');
+  rect(100,100, 50, 75);
+  pop();
+
+
+}
 
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End forest man function////////////////////////////
