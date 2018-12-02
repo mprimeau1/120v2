@@ -35,11 +35,15 @@ function draw() {
 
 // draw the squirel
   squirel();
-//draw flowers
+
+//draw flower 1
+  flowers();
+
+//draw flower 2
   flowers();
 
 //draw the snow
-    snow();
+  snow();
 
 }
 
@@ -50,13 +54,14 @@ function draw() {
 // begin new function snow
 // snow moving with mouse functions
 function snow(){
+
   let density = map(mouseX, 0, width, 15, 100);
   fill(random(colors));
   strokeWeight(.5);
   stroke(random(colors));
 // Make a loop of moving snow with mouse
-  for (let k = 2; k <= width + 5; k += density) {
-    for (let h = 2; h <= height + 5; h +=density) {
+  for (let k = 2; k <= width - 5; k += density) {
+    for (let h = 2; h <= height - 5; h +=density) {
 // draw snow
   ellipse(k , h ,5 );
 
@@ -111,16 +116,19 @@ function squirel (){
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////flowers function////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-function flowers (){
+function flowers (pos_F, pos_C, scale_F, scale_C){
+
+// scale and position
+  translate( pos_F, pos_C );
+  scale( scale_F, scale_C );
 
 //flower center
   push();
   stroke('black');
   strokeWeight(0);
   fill('rgb(172, 154, 33)');
-  ellipse(500 ,200, 15, 15);
+  ellipse(150 ,200, 15, 15);
   pop();
-
 
 }
 
