@@ -29,12 +29,17 @@ function draw() {
   imIdx++
 //using a module for the background images
   imIdx = imIdx % 4;
-//draw the snow
-  snow();
+
 //draw the frog
   frog();
+
 // draw the squirel
   squirel();
+//draw flowers
+  flowers();
+
+//draw the snow
+    snow();
 
 }
 
@@ -106,6 +111,18 @@ function squirel (){
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////flowers function////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
+function flowers (){
+
+//flower center
+  push();
+  stroke('black');
+  strokeWeight(0);
+  fill('rgb(172, 154, 33)');
+  ellipse(500 ,200, 15, 15);
+  pop();
+
+
+}
 
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End flowers function///////////////////////////////
