@@ -44,13 +44,14 @@ function draw() {
 //draw flower 2
   flowers(200, 25, .75, .75);
 
-//draw the snow
-  snow();
-
 //draw bird
   bird();
+
 // draw forestMAN
   forestMAN();
+
+//draw the snow
+  snow();
 
 }
 
@@ -65,13 +66,13 @@ function snow(pos_L, pos_M, scale_F, scale_C){
   translate( pos_L, pos_M );
   scale( scale_F, scale_C );
 
-  let density = map(mouseX, 0, width, 15, 100);
+ let density = map(mouseX, 0, width, 15, 100);
   fill(random(colors));
   strokeWeight(.5);
   stroke(random(colors));
 // Make a loop of moving snow with mouse
   for (let k = 1; k <= width - 5; k += density) {
-    for (let h = 1; h <= height - 5; h +=density) {
+   for (let h = 1; h <= height - 5; h +=density) {
 // draw snow
   ellipse(k ,h, 5 ,5 );
 
@@ -154,12 +155,12 @@ function forestMAN (){
 
 //forestMAN body
   push();
+  translate( mouseX, mouseY );
   stroke('black');
   strokeWeight(4);
   fill('rgb(241, 149, 28)');
-  rect(100,100, 50, 75);
+  rect(mouseX,mouseY, 50, 75);
   pop();
-
 
 }
 
