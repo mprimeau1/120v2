@@ -1,10 +1,12 @@
-
+//forestimages
 let images = [];
+//helps makes the background repeat
 let imIdx = 0;
 //snow colors
 let colors = ['rgb(238, 185, 207)', 'white', 'rgb(179, 181, 227)', 'rgb(164, 218, 219)', 'rgb(232, 201, 201)'];
 
 function preload(){
+//moving forest images
   images[0] = loadImage("./images/background1.jpg")
   images[1] = loadImage("./images/background2.jpg")
   images[2] = loadImage("./images/background3.jpg")
@@ -25,12 +27,16 @@ function draw() {
 
 // makes the background image repeat
   imIdx++
+//using a module for the background images
   imIdx = imIdx % 4;
-
-//snow function
-
+//draw the snow  
   snow();
 }
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////snow function///////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
 // begin new function snow
 // snow moving with mouse functions
 function snow(){
@@ -47,4 +53,6 @@ function snow(){
     }
   }
 }
-// End snow falling
+///////////////////////////////////////////////////////////////////////
+//////////////////// End snow falling /////////////////////////////////
+///////////////////////////////////////////////////////////////////////
