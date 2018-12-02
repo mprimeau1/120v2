@@ -34,12 +34,13 @@ function draw() {
 // begin new function snow
 // snow moving with mouse functions
 function snow(){
-  let density = map(mouseX, 0, width, 20, 60);
+  let density = map(mouseX, 0, width, 20, 100);
   fill(random(colors));
+  strokeWeight(.5);
   stroke(random(colors));
 // Make a loop of moving snow with mouse
-  for (let k = 5; k <= width-10; k += density) {
-    for (let h = 5; h <= height-10; h+=density) {
+  for (let k = 3; k <= width-5; k += density) {
+    for (let h = 3; h <= height-5; h+=density) {
 // draw snow
   ellipse(k , h ,5 );
 
