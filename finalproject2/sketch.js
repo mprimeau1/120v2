@@ -141,6 +141,15 @@ function squirel (){
   ellipse(520 ,290, 15, 50);
   pop();
 
+// squirel head
+  push();
+  strokeWeight(0);
+  fill('rgb(105,58,15)');
+  ellipse(520,257,30,15);
+  ellipse(520,250,25,25);
+  pop();
+
+
 
 }
 
