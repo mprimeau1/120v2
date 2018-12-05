@@ -135,10 +135,9 @@ function squirel (){
 
 //squirel body
   push();
-  stroke('black');
-  strokeWeight(4);
+  strokeWeight(0);
   fill('rgb(105, 58, 15)');
-  ellipse(520 ,290, 15, 50);
+  ellipse(520 ,280, 20, 40);
   pop();
 
 // squirel head
@@ -147,6 +146,40 @@ function squirel (){
   fill('rgb(105,58,15)');
   ellipse(520,257,30,15);
   ellipse(520,250,25,25);
+//ears
+  triangle(507,246,512,226,517,246);
+  triangle(520,246,525,226,530,246);
+// feet
+  ellipse(520,300,20,10);
+  pop();
+//belly
+  push();
+  strokeWeight(0);
+  fill('rgb(215, 163, 85)');
+  ellipse(520,280,13,28);
+//mouth
+  ellipse(520,257,20,10);
+  pop();
+//eyes
+  push();
+  strokeWeight(0);
+  fill('white');
+  ellipse(525,247,7,12);
+  ellipse(515,247,7,12);
+  pop();
+//inner eyes
+  push();
+  strokeWeight(0);
+  fill('blue');
+  ellipse(525,247,5,10);
+  ellipse(515,247,5,10);
+  pop();
+//pupal
+  push();
+  strokeWeight(0);
+  fill('black');
+  ellipse(525,247,3,5);
+  ellipse(515,247,3,5);
   pop();
 
 
