@@ -292,6 +292,20 @@ function bird (){
   ellipse(405,55,5);
   ellipse(425,55,5);
   pop();
+//nose
+  push();
+  strokeWeight(1);
+  stroke('black');
+  fill('orange');
+  triangle(407, 67, 415, 75, 421, 67);
+  pop();
+// legs
+  push();
+  stroke('orange');
+  strokeWeight(4);
+  line(408, 85, 408, 95);
+  line(422, 85, 422, 95);
+  pop();
 
 }
 
