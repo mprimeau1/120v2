@@ -132,6 +132,12 @@ function frog (){
 ////////////////////////squirel function////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 function squirel (){
+// tail
+  push();
+  strokeWeight(10);
+  stroke('rgb(105,58,15)');
+  line(528, 290, 545, 255);
+  pop();
 
 //squirel body
   push();
@@ -181,8 +187,14 @@ function squirel (){
   ellipse(525,247,3,5);
   ellipse(515,247,3,5);
   pop();
-
-
+//teeth
+  push();
+  strokeWeight(1);
+  stroke('black');
+  fill('white');
+  rect(516,255,3,6);
+  rect(519,255,3,6);
+  pop();
 
 }
 
