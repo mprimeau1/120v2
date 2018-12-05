@@ -62,12 +62,11 @@ function draw() {
 // begin new function snow
 // snow moving with mouse functions
 function snow(pos_L, pos_M, scale_F, scale_C){
-
+push();
 // scale and position
   translate( pos_L, pos_M );
   scale( scale_F, scale_C );
-push();
-  strokeWeight(0);
+
  let density = map(mouseX, 0, width, 15, 100);
   fill('white');
 // Make a loop of moving snow with mouse
@@ -155,13 +154,17 @@ push();
   translate( pos_F, pos_C );
   scale( scale_F, scale_C );
 
-//flower center
-
+//flower stem
+  push();
+  stroke('green');
+  strokeWeight(5);
+  line(150,205,150,225);
+  pop();
+//frower stem
   stroke('black');
   strokeWeight(0);
   fill('rgb(172, 154, 33)');
   ellipse(150 ,200, 15, 15);
-  pop();
 
 }
 
@@ -201,7 +204,9 @@ function bird (){
   stroke('black');
   strokeWeight(4);
   fill('rgb(46, 66, 110)');
-  ellipse(350 ,50, 15, 50);
+  ellipse(400 ,50, 15, 50);
+  ellipse(405 ,53, 10, 40);
+  ellipse(395 ,53, 10, 40);
   pop();
 
 
