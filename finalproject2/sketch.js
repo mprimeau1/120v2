@@ -249,9 +249,9 @@ function forestMAN (){
   push();
   translate( mouseX, mouseY );
   stroke('black');
-  strokeWeight(4);
-  fill('rgb(241, 149, 28)');
-  rect(mouseX,mouseY, 50, 75);
+  strokeWeight(2);
+  fill('rgb(11, 42, 12)');
+  rect(mouseX,mouseY, 20, 40);
   pop();
 
 }
