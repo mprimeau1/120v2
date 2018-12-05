@@ -271,11 +271,27 @@ function bird (){
   stroke('black');
   strokeWeight(4);
   fill('rgb(46, 66, 110)');
-  ellipse(400 ,50, 15, 50);
-  ellipse(405 ,53, 10, 40);
-  ellipse(395 ,53, 10, 40);
+  ellipse(415 ,60, 50);
   pop();
-
+// eyes
+  push();
+  fill('white');
+  ellipse(405,55,12,15);
+  ellipse(425,55,12,15);
+  pop();
+// colored eyes
+  push();
+  fill('blue');
+  ellipse(405,55,9,12);
+  ellipse(425,55,9,12);
+  pop();
+// pupal
+  push();
+  stroke('black');
+  fill('black');
+  ellipse(405,55,5);
+  ellipse(425,55,5);
+  pop();
 
 }
 
