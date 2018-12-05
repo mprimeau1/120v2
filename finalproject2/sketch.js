@@ -160,7 +160,17 @@ push();
   strokeWeight(5);
   line(150,205,150,225);
   pop();
-//frower stem
+
+// flower petals
+
+  push();
+  strokeWeight(0);
+  stroke('black');
+  fill('purple');
+  triangle(135, 215, 150, 175, 165, 215);
+  pop();
+
+//frower center
   stroke('black');
   strokeWeight(0);
   fill('rgb(172, 154, 33)');
