@@ -299,6 +299,15 @@ function bird (){
   fill('orange');
   triangle(407, 67, 415, 75, 421, 67);
   pop();
+//wings
+  push();
+  strokeWeight(2);
+  stroke('black');
+  fill('rgb(46, 66, 110)');
+  ellipse(390,70,10,25);
+  ellipse(440,70,10,25);
+  pop();
+
 // legs
   push();
   stroke('orange');
