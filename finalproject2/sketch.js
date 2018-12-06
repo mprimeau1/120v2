@@ -249,7 +249,6 @@ pop();
 function forestMAN (){
 
 // arms
-
   push();
   strokeWeight(6);
   stroke('rgb(223,118,9)');
@@ -287,6 +286,46 @@ function forestMAN (){
   stroke('black');
   fill('black');
   rect(124,75,19,10);
+  pop();
+//head of forestMAN
+  push();
+  strokeWeight(0);
+  stroke('black');
+  fill('rgb(221, 185, 125)');
+  ellipse(134,25,20);
+  pop();
+//eyes
+  push();
+  strokeWeight(1);
+  stroke('black');
+  fill('white');
+  ellipse(130,25,5);
+  ellipse(137,25,5);
+  pop();
+
+// pupals
+  push();
+  strokeWeight(0);
+  stroke('blue');
+  fill('blue');
+  ellipse(130,25,2);
+  ellipse(137,25,2);
+  pop();
+
+// sweet hat
+  push();
+  strokeWeight(1);
+  stroke('black');
+  fill('black');
+  ellipse(135,18,20,10);
+  rect(130,8,10,5);
+  pop();
+// mouth
+  push();
+  strokeWeight(0);
+  stroke('black');
+  fill('rgb(113, 39, 23)');
+  arc(133, 31, 5, 5, 0, PI + QUARTER_PI, PIE);
   pop();
 }
 
