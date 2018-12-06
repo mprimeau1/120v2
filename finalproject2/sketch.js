@@ -2,8 +2,6 @@
 let images = [];
 //helps makes the background repeat
 let imIdx = 0;
-//snow colors
-let colors = ['rgb(238, 185, 207)','white', 'rgb(179, 181, 227)', 'rgb(164, 218, 219)', 'rgb(232, 201, 201)'];
 let snow = [];
   const numOfsnow = 300;
 function preload(){
@@ -89,28 +87,27 @@ class snowFlake {
         this.posY = y;
         this.deltaX = random(-5, 5);
         this.deltaY = random(-5, 5);
-    }
+          }
 
-    display() {
-
-        push();
+  display() {
+    push();
 // remove the stroke
-        noStroke();
+    noStroke();
 // set the fill color
-        fill(this.color);
+    fill(this.color);
 // set the position and size of snowFlake
-        translate(this.posX, this.posY);
-        ellipse(0, 0, this.sizeA);
-        pop();
+    translate(this.posX, this.posY);
+    ellipse(0, 0, this.sizeA);
+    pop();
     }
 
-    move() {
+  move() {
 // move the snowFlake in a random way on the x an y axis
-        this.posX += this.deltaX;
-        this.posY += this.deltaY;
+      this.posX += this.deltaX;
+      this.posY += this.deltaY;
     }
 
-    edgeHit() {
+  edgeHit() {
 // if snow hits a vertical wall then change the color to light blue
         if (this.posX + this.radA >= width || this.posX - this.radA <= 0) {
             this.deltaX *= -1;
@@ -123,8 +120,7 @@ class snowFlake {
         }
     }
 
-
-    snowCheck(otherSnow, JX) {
+  snowCheck(otherSnow, JX) {
 // for loop touches the snow
       for (let n = 0; n < otherSnow.length; n++) {
 // if n != JX, then check for touching
