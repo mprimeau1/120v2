@@ -4,6 +4,7 @@ let images = [];
 let imIdx = 0;
 let snow = [];
   const numOfsnow = 300;
+
 function preload(){
 //moving forest images
   images[0] = loadImage("./images/background1.jpg")
@@ -462,7 +463,7 @@ push();
   stroke('black');
   strokeWeight(0);
   fill('rgba(248, 251, 69, 0.5)');
-  ellipse(mouseX,mouseY,10);
+  ellipse(mouseX,mouseY,30);
 pop();
 
 }
