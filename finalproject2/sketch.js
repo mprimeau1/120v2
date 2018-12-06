@@ -49,12 +49,12 @@ function draw() {
 
 // draw forestMAN
   forestMAN();
-  
+
 //draw the snow
   snow();
 
-//draw the magic wand
-  magicWand();
+//draw the firefly cursor
+  firefly();
 
 }
 
@@ -248,19 +248,45 @@ pop();
 
 function forestMAN (){
 
+// arms
+
+  push();
+  strokeWeight(6);
+  stroke('rgb(223,118,9)');
+  line(125,40,110,60);
+  line(145,40,150,55);
+  line(150,55,155,45);
+  pop();
+
 //forestMAN body
   push();
   stroke('black');
   strokeWeight(2);
-  fill('rgb(11, 42, 12)');
-  rect(150,150, 20, 40);
+  fill('rgb(223, 118, 9)');
+  rect(125,35, 18, 28);
   pop();
+// cool belt
+  push();
+  strokeWeight(4);
+  stroke('brown');
+  line(125, 35, 142, 58);
+  line(127, 58, 140, 58);
+  pop();
+
 //legs
   push();
   stroke('black');
   strokeWeight(2);
-  fill('rgb(11,42,12)');
-  rect(100, 100 ,10,20);
+  fill('rgb(223,118,9)');
+  rect(133, 64 ,10,15);
+  rect(125, 64 ,10,15);
+  pop();
+//shoes
+  push();
+  strokeWeight(1);
+  stroke('black');
+  fill('black');
+  rect(124,75,19,10);
   pop();
 }
 
@@ -331,16 +357,16 @@ function bird (){
 ////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
-//////////////////// magic wand function////////////////////////////////
+////////////////////firefly function////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-function magicWand(){
+function firefly(){
 
 push();
   translate( mouseX, mouseY );
   stroke('black');
   strokeWeight(0);
-  fill('yellow');
-  ellipse(mouseX,mouseY,50);
+  fill('rgba(248, 251, 69, 0.5)');
+  ellipse(mouseX,mouseY,10);
 pop();
 
 }
