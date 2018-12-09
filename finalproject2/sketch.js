@@ -4,6 +4,13 @@ let images = [];
 let imIdx = 0;
 let snow = [];
   const numOfsnow = 300;
+let soundWater = [];
+let soundSnow = [];
+let soundWhistle = [];
+let soundFrog = [];
+let soundSquirrel = [];
+let soundBird = [];
+
 
 function preload(){
 //moving forest images
@@ -11,6 +18,13 @@ function preload(){
   images[1] = loadImage("./images/background2.jpg")
   images[2] = loadImage("./images/background3.jpg")
   images[3] = loadImage("./images/background4.jpg")
+// sounds
+  soundWater = loadSound('./sounds/water.mp3')
+  soundSnow = loadSound('./sounds/snow.mp3')
+  soundWhistle = loadSound('./sounds/whisle.mp3')
+  soundFrog = loadSound('./sounds/frog.mp3')
+  soundBird = loadSound('./sounds/bird.mp3')
+  soundSquirrel = loadSound('./sounds/squirel.mp3')
 
 }
 function setup() {
