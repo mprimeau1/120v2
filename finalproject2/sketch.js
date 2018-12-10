@@ -308,10 +308,15 @@ display()
 ////////////////////////////////////////////////////////////////////////
 class flowers {
   constructor(x,y,r){
-
-if (this.clicked == true){
-    play.soundWater
-
+    this.flX = 150;
+    this.flY = 200;
+    this.flR = 15;
+}}
+if(mouseIsClicked){
+ let flD = dist( flX, flY, mouseX, mouseY )
+      if( flD < flowerR ){
+                 play.soundWater
+            }
 }
   display();
 
@@ -340,9 +345,9 @@ push();
   stroke('black');
   strokeWeight(0);
   fill('rgb(172, 154, 33)');
-  ellipse(150 ,200, 15, 15);
+  ellipse(flX,flY,flR);
 pop();
-}}
+
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End flowers class///////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -352,11 +357,17 @@ pop();
 ////////////////////////////////////////////////////////////////////////
 
 class forestMAN {
-  constructor(x,y,r){
-
-  if (this.clicked == true){
-      play.soundWhistle
-
+  constructor(x,y,w,h){
+    this.fmX = 125;
+    this.fmY = 35;
+    this.fmW = 18;
+    this.fmH = 28;
+  }}
+  if(mouseIsClicked){
+  let fmD = dist( fmX, fmY, mouseX, mouseY )
+      if( fmD < forestMANR ){
+                 play.soundWhistle
+            }
   }
   display();
 // arms
@@ -373,7 +384,7 @@ class forestMAN {
   stroke('black');
   strokeWeight(2);
   fill('rgb(223, 118, 9)');
-  rect(125,35, 18, 28);
+  rect(fmX.fmY,fmW,fmH);
   pop();
 // cool belt
   push();
@@ -438,7 +449,7 @@ class forestMAN {
   fill('rgb(113, 39, 23)');
   arc(133, 31, 5, 5, 0, PI + QUARTER_PI, PIE);
   pop();
-}}
+
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End forest man class////////////////////////////
 ////////////////////////////////////////////////////////////////////////
