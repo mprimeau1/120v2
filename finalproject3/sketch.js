@@ -5,11 +5,11 @@ let imIdx = 0;
 let snow = [];
   const numOfsnow = 300;
 var soundWater;
-let soundSnow = [];
-let soundWhistle = [];
-let soundFrog = [];
-let soundSquirrel = [];
-let soundBird = [];
+var soundSnow ;
+var soundWhistle ;
+var soundFrog ;
+var soundSquirrel ;
+var soundBird ;
 
 
 function preload(){
@@ -19,17 +19,18 @@ function preload(){
   images[2] = loadImage("./images/background3.jpg")
   images[3] = loadImage("./images/background4.jpg")
 // sounds
-  soundWater = loadSound("./sounds/water.mp3");
-  soundSnow = loadSound("./sounds/snow.mp3");
-  soundWhistle = loadSound("./sounds/whisle.mp3");
-  soundFrog = loadSound("./sounds/frog.mp3");
-  soundBird = loadSound("./sounds/bird.mp3");
-  soundSquirrel = loadSound("./sounds/squirel.wav");
+//  soundWater = loadSound("./sounds/water.mp3");
+//  soundSnow = loadSound("./sounds/snow.mp3");
+//  soundWhistle = loadSound("./sounds/whisle.mp3");
+//  soundFrog = loadSound("./sounds/frog.mp3");
+//  soundBird = loadSound("./sounds/bird.mp3");
+//  soundSquirrel = loadSound("./sounds/squirel.wav");
 }
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
     createCanvas( 600,400 );
+    soundWater = loadSound("./sounds/water.mp3",loaded);
 // create a new snow object of class type "snowFlake"
       let init_x = 20;
       let init_y = 60;
@@ -43,7 +44,9 @@ function setup() {
               }
           }
 }
-
+function loaded(){
+  soundWater.play();
+}
 
 function draw() {
   noCursor();
