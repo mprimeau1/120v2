@@ -2,6 +2,9 @@
 let images = [];
 //helps makes the background repeat
 let imIdx = 0;
+let snow = [];
+  const numOfsnow = 300
+
 //sounds
 var soundWater;
 var soundSnow;
@@ -22,17 +25,17 @@ function preload(){
   soundWhistle = loadSound('./sounds/whisle.mp3')
   soundFrog = loadSound('./sounds/frog.mp3')
   soundBird = loadSound('./sounds/bird.mp3')
-  soundSquirrel = loadSound('./sounds/squirel.wav')
+//  soundSquirrel = loadSound('./sounds/squirel.wav')
 }
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
     createCanvas( 600,400 );
-// create a new snow object of class type "snowFlake"
+// create a new snow object of class type "SnowFlake"
       let init_x = 20;
       let init_y = 60;
         for (let i = 0; i < numOfsnow; i++) {
-        snow.push(new snowFlake(init_x, init_y));
+        snow.push(new SnowFlake(init_x, init_y));
 // move the starting postion
         init_x += 200;
         if (init_x > width) {
@@ -76,7 +79,7 @@ function draw() {
   forestMAN.display();
 
   for (let i = 0; i < snow.length; i++) {
-// call  methods for snowFlake
+// call  methods for SnowFlake
       snow[i].snowCheck(snow, i);
       snow[i].edgeHit();
       snow[i].move();
@@ -98,7 +101,7 @@ if( mouseIsClicked ){
  if(mouseIsClicked){
   let sqD = dist( possX, possY, mouseX, mouseY )
        if( sqD < squirelR ){
-                soundSquirrel.play
+                soundSnow.play
              }
   }
   if(mouseIsClicked){
@@ -119,9 +122,9 @@ if( mouseIsClicked ){
                 soundBird.play
             }}
 ///////////////////////////////////////////////////////////////
-////////// snowFlake CLASS ///////////////////////////////////
+////////// SnowFlake CLASS ///////////////////////////////////
 //////////////////////////////////////////////////////////////
-class snowFlake {
+class SnowFlake {
     constructor(x, y, w, h) {
         this.color = 'white';
         this.sizeA = random(0, 15);
@@ -134,20 +137,20 @@ class snowFlake {
           }
 
   display() {
-      const numOfsnow = 300
+
     push();
 // remove the stroke
     noStroke();
 // set the fill color
     fill(this.color);
-// set the position and size of snowFlake
+// set the position and size of SnowFlake
     translate(this.posX, this.posY);
     ellipse(0, 0, this.sizeA);
     pop();
     }
 
   move() {
-// move the snowFlake in a random way on the x an y axis
+// move the SnowFlake in a random way on the x an y axis
       this.posX += this.deltaX;
       this.posY += this.deltaY;
     }
@@ -189,7 +192,7 @@ class snowFlake {
     }
 }
 ////////////////////////////////////////////////////////////////////////
-////////// End snowFlake CLASS /////////////////////////////////////////
+////////// End SnowFlake CLASS /////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
