@@ -167,19 +167,25 @@ class snowFlake {
 ////////////////////////////////////////////////////////////////////////
 
 class Frog {
-  constructor(x,y,r){
 
-if (this.clicked == true){
-    play.soundFrog
-
-}
+    constructor(x,y,r){
+      this.possX = 65;
+      this.possY = 240;
+      this.radF = 50;
+  }}
+  if(mouseIsClicked){
+   let d = dist( possX, possY, mouseX, mouseY )
+        if( d < frogR ){
+                   play.soundFrog
+              }
+   }
   display()
 //frog body
   push();
   stroke('black');
   strokeWeight(4);
   fill('rgb(19, 66, 17)');
-  ellipse(65 ,240, 50, 50);
+  ellipse(possX ,possY, radF);
   ellipse(50 ,225, 50, 50);
   ellipse(75,250,25,25);
   pop();
@@ -204,8 +210,7 @@ if (this.clicked == true){
   push();
   arc(50, 238, 15, 15, 0, PI + QUARTER_PI, PIE);
   pop();
-}
-}
+
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End frog class//////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -215,12 +220,18 @@ if (this.clicked == true){
 ////////////////////////////////////////////////////////////////////////
 
 class squirel {
-  constructor(x,y,r){
-
-if (this.clicked == true){
-    play.soundSquirrel
-
-}
+  constructor(x,y,w,h){
+    this.sqX = 520;
+    this.sqY = 280;
+    this.sqW = 20;
+    this.sqH = 40;
+}}
+if(mouseIsClicked){
+ let sqD = dist( possX, possY, mouseX, mouseY )
+      if( sqD < squirelR ){
+                 play.soundSquirrel
+            }
+ }
 
 display()
 // tail
@@ -234,7 +245,7 @@ display()
   push();
   strokeWeight(0);
   fill('rgb(105, 58, 15)');
-  ellipse(520 ,280, 20, 40);
+  ellipse(this.sqX ,this.sqY, this.sqW, this.sqH);
   pop();
 
 // squirel head
@@ -286,8 +297,8 @@ display()
   rect(516,255,3,6);
   rect(519,255,3,6);
   pop();
-}
-}
+
+
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End squirel class///////////////////////////////
 ////////////////////////////////////////////////////////////////////////
