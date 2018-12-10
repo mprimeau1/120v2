@@ -92,31 +92,31 @@ function mouseIsClicked(){
 if( mouseIsClicked ){
  //if let d = dist( possX, possY, mouseX, mouseY );
       if( d < frogR ){
-                 play.soundFrog
+                 soundFrog.play
 
  }}
  if(mouseIsClicked){
   let sqD = dist( possX, possY, mouseX, mouseY )
        if( sqD < squirelR ){
-                  play.soundSquirrel
+                soundSquirrel.play
              }
   }
   if(mouseIsClicked){
    let flD = dist( flX, flY, mouseX, mouseY )
         if( flD < flowerR ){
-                   play.soundWater
+                  soundWater.play
               }
   }
   if(mouseIsClicked){
   let fmD = dist( fmX, fmY, mouseX, mouseY )
       if( fmD < forestMANR ){
-                 play.soundWhistle
+              soundWhistle.play
             }
   }
   if(mouseIsClicked){
   let birdD = dist( birdX, birdY, mouseX, mouseY )
       if( birdD < birdR ){
-                 play.soundBird
+                soundBird.play
             }}
 ///////////////////////////////////////////////////////////////
 ////////// snowFlake CLASS ///////////////////////////////////
