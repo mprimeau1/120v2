@@ -11,13 +11,12 @@ function preload(){
   images[1] = loadImage("./images/background2.jpg")
   images[2] = loadImage("./images/background3.jpg")
   images[3] = loadImage("./images/background4.jpg")
-// sounds
 }
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
     createCanvas( 600,400 );
-    song = loadSound("./sounds/bird.mp3",loaded);
+    song = loadSound("./sounds/whisle.mp3",loaded);
 
 // create a new snow object of class type "snowFlake"
       let init_x = 20;

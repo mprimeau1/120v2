@@ -19,18 +19,18 @@ function preload(){
   images[1] = loadImage("./images/background2.jpg")
   images[2] = loadImage("./images/background3.jpg")
   images[3] = loadImage("./images/background4.jpg")
-// sounds
-  soundWater = loadSound('./sounds/water.mp3')
-  soundSnow = loadSound('./sounds/snow.mp3')
-  soundWhistle = loadSound('./sounds/whisle.mp3')
-  soundFrog = loadSound('./sounds/frog.mp3')
-  soundBird = loadSound('./sounds/bird.mp3')
-//  soundSquirrel = loadSound('./sounds/squirel.wav')
+
 }
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
     createCanvas( 600,400 );
+// sounds
+      soundWater = loadSound('./sounds/water.mp3',loaded)
+      soundSnow = loadSound('./sounds/snow.mp3',loaded)
+      soundWhistle = loadSound('./sounds/whisle.mp3',loaded)
+      soundFrog = loadSound('./sounds/frog.mp3',loaded)
+      soundBird = loadSound('./sounds/bird.mp3',loaded)
 // create a new snow object of class type "SnowFlake"
       let init_x = 20;
       let init_y = 60;
@@ -91,7 +91,8 @@ function draw() {
 
 }
 // clicked sound stuff
-function mouseIsClicked(){
+function loaded() {
+
 if( mouseIsClicked ){
  //if let d = dist( possX, possY, mouseX, mouseY );
       if( d < frogR ){
