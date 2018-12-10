@@ -4,13 +4,12 @@ let images = [];
 //helps makes the background repeat
 let imIdx = 0;
 let snow = [];
-  const numOfsnow = 300;
-let soundWater = [];
-let soundSnow = [];
-let soundWhistle = [];
-let soundFrog = [];
-let soundSquirrel = [];
-let soundBird = [];
+var soundWater = [];
+var soundSnow = [];
+var soundWhistle = [];
+var soundFrog = [];
+var soundSquirrel = [];
+var soundBird = [];
 
 
 function preload(){
@@ -25,7 +24,7 @@ function preload(){
   soundWhistle = loadSound('./sounds/whisle.mp3')
   soundFrog = loadSound('./sounds/frog.mp3')
   soundBird = loadSound('./sounds/bird.mp3')
-  soundSquirrel = loadSound('./sounds/squirel.mp3')
+  soundSquirrel = loadSound('./sounds/squirel.wav')
 }
 function setup() {
 // set frame rate 4 frames second
@@ -107,6 +106,7 @@ class snowFlake {
           }
 
   display() {
+      const numOfsnow = 300
     push();
 // remove the stroke
     noStroke();
