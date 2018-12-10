@@ -87,7 +87,37 @@ function draw() {
   firefly();
 
 }
+// clicked sound stuff
+function mouseIsClicked(){
+if( mouseIsClicked ){
+ //if let d = dist( possX, possY, mouseX, mouseY );
+      if( d < frogR ){
+                 play.soundFrog
 
+ }}
+ if(mouseIsClicked){
+  let sqD = dist( possX, possY, mouseX, mouseY )
+       if( sqD < squirelR ){
+                  play.soundSquirrel
+             }
+  }
+  if(mouseIsClicked){
+   let flD = dist( flX, flY, mouseX, mouseY )
+        if( flD < flowerR ){
+                   play.soundWater
+              }
+  }
+  if(mouseIsClicked){
+  let fmD = dist( fmX, fmY, mouseX, mouseY )
+      if( fmD < forestMANR ){
+                 play.soundWhistle
+            }
+  }
+  if(mouseIsClicked){
+  let birdD = dist( birdX, birdY, mouseX, mouseY )
+      if( birdD < birdR ){
+                 play.soundBird
+            }}
 ///////////////////////////////////////////////////////////////
 ////////// snowFlake CLASS ///////////////////////////////////
 //////////////////////////////////////////////////////////////
@@ -173,12 +203,7 @@ class Frog {
       this.possY = 240;
       this.radF = 50;
   }}
-  if (mouseIsClicked()
-   let d = dist( possX, possY, mouseX, mouseY )
-        if( d < frogR ){
-                   play.soundFrog
-              
-   }
+
   display()
 //frog body
   push();
@@ -226,12 +251,7 @@ class squirel {
     this.sqW = 20;
     this.sqH = 40;
 }}
-if(mouseIsClicked){
- let sqD = dist( possX, possY, mouseX, mouseY )
-      if( sqD < squirelR ){
-                 play.soundSquirrel
-            }
- }
+
 
 display()
 // tail
@@ -312,12 +332,7 @@ class flowers {
     this.flY = 200;
     this.flR = 15;
 }}
-if(mouseIsClicked){
- let flD = dist( flX, flY, mouseX, mouseY )
-      if( flD < flowerR ){
-                 play.soundWater
-            }
-}
+
   display();
 
 push();
@@ -363,12 +378,7 @@ class forestMAN {
     this.fmW = 18;
     this.fmH = 28;
   }}
-  if(mouseIsClicked){
-  let fmD = dist( fmX, fmY, mouseX, mouseY )
-      if( fmD < forestMANR ){
-                 play.soundWhistle
-            }
-  }
+
   display();
 // arms
   push();
@@ -464,11 +474,7 @@ class bird {
     this.birdY = 60;
     this.birdR = 50;
   }}
-  if(mouseIsClicked){
-  let birdD = dist( birdX, birdY, mouseX, mouseY )
-      if( birdD < birdR ){
-                 play.soundBird
-            }
+
   display();
 
 //bird body
