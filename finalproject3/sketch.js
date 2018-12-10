@@ -4,7 +4,7 @@ let images = [];
 let imIdx = 0;
 let snow = [];
   const numOfsnow = 300;
-let soundWater = [];
+var soundWater;
 let soundSnow = [];
 let soundWhistle = [];
 let soundFrog = [];
@@ -19,12 +19,12 @@ function preload(){
   images[2] = loadImage("./images/background3.jpg")
   images[3] = loadImage("./images/background4.jpg")
 // sounds
-//  soundWater = loadSound('./sounds/water.mp3')
-//  soundSnow = loadSound('./sounds/snow.mp3')
-//  soundWhistle = loadSound('./sounds/whisle.mp3')
-//  soundFrog = loadSound('./sounds/frog.mp3')
-//  soundBird = loadSound('./sounds/bird.mp3')
-//  soundSquirrel = loadSound('./sounds/squirel.mp3')
+  soundWater = loadSound("./sounds/water.mp3");
+  soundSnow = loadSound("./sounds/snow.mp3");
+  soundWhistle = loadSound("./sounds/whisle.mp3");
+  soundFrog = loadSound("./sounds/frog.mp3");
+  soundBird = loadSound("./sounds/bird.mp3");
+  soundSquirrel = loadSound("./sounds/squirel.wav");
 }
 function setup() {
 // set frame rate 4 frames second
