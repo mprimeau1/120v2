@@ -459,11 +459,16 @@ class forestMAN {
 ////////////////////////////////////////////////////////////////////////
 
 class bird {
-  constructor(x,y,r){
-
-  if (this.clicked == true){
-      play.soundBird
-  }
+  constructor(x,y,w,h){
+    this.birdX = 415;
+    this.birdY = 60;
+    this.birdR = 50;
+  }}
+  if(mouseIsClicked){
+  let birdD = dist( birdX, birdY, mouseX, mouseY )
+      if( birdD < birdR ){
+                 play.soundBird
+            }
   display();
 
 //bird body
@@ -471,7 +476,7 @@ class bird {
   stroke('black');
   strokeWeight(4);
   fill('rgb(46, 66, 110)');
-  ellipse(415 ,60, 50);
+  ellipse(birdX ,birdY, birdR);
   pop();
 // eyes
   push();
@@ -515,7 +520,7 @@ class bird {
   line(408, 85, 408, 95);
   line(422, 85, 422, 95);
   pop();
-}}
+
 ////////////////////////////////////////////////////////////////////////
 //////////////////// End bird class//////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
