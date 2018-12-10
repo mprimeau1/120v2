@@ -173,11 +173,11 @@ class Frog {
       this.possY = 240;
       this.radF = 50;
   }}
-  if(mouseIsClicked){
+  if (mouseIsClicked()
    let d = dist( possX, possY, mouseX, mouseY )
         if( d < frogR ){
                    play.soundFrog
-              }
+              
    }
   display()
 //frog body
