@@ -1,5 +1,7 @@
 //forestimages
 let images = [];
+//drawn stuff
+let frog = [];
 //helps makes the background repeat
 let imIdx = 0;
 let snow = [];
@@ -25,12 +27,11 @@ function preload(){
   soundFrog = loadSound('./sounds/frog.mp3')
   soundBird = loadSound('./sounds/bird.mp3')
   soundSquirrel = loadSound('./sounds/squirel.mp3')
-
 }
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
-      createCanvas( 600,400 );
+    createCanvas( 600,400 );
 // create a new snow object of class type "snowFlake"
       let init_x = 20;
       let init_y = 60;
@@ -43,6 +44,8 @@ function setup() {
             init_y += 50;
               }
           }
+//frog class info
+frog.push();
 }
 
 
@@ -58,8 +61,8 @@ function draw() {
 //using a module for the background images
   imIdx = imIdx % 4;
 
-//draw the frog
-  frog();
+//call for the methods for frog
+  frog.display();
 
 // draw the squirel
   squirel();
@@ -161,11 +164,17 @@ class snowFlake {
 
 
 ////////////////////////////////////////////////////////////////////////
-////////////////////////frog function///////////////////////////////////
+////////////////////////frog class///////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
-function frog (){
+class Frog {
+  constructor(x,y,r){
 
+if (this.clicked == true){
+    play.soundFrog
+
+}
+  display() 
 //frog body
   push();
   stroke('black');
@@ -196,7 +205,6 @@ function frog (){
   push();
   arc(50, 238, 15, 15, 0, PI + QUARTER_PI, PIE);
   pop();
-
 }
 
 ////////////////////////////////////////////////////////////////////////
