@@ -4,9 +4,7 @@ let images = [];
 let imIdx = 0;
 let snow = [];
   const numOfsnow = 300;
-
-
-
+var song;
 function preload(){
 //moving forest images
   images[0] = loadImage("./images/background1.jpg")
@@ -14,12 +12,13 @@ function preload(){
   images[2] = loadImage("./images/background3.jpg")
   images[3] = loadImage("./images/background4.jpg")
 // sounds
-
+  song = loadSound("rainywoods.wav");
 }
 function setup() {
 // set frame rate 4 frames second
   frameRate(4);
     createCanvas( 600,400 );
+      song.play();
 // create a new snow object of class type "snowFlake"
       let init_x = 20;
       let init_y = 60;
@@ -33,7 +32,15 @@ function setup() {
               }
           }
 }
-
+function mousePressed() {
+  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
+    song.stop();
+//    background(255,0,0);
+//  } else {
+//    song.play();
+//    background(0,255,0);
+  }
+}
 
 function draw() {
   noCursor();
