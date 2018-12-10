@@ -34,12 +34,9 @@ function setup() {
 }
 function loaded() {
   song.play();
+  song.loop();
 }
-function mousePressed() {
-  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
-    song.stop();
 
-}}
 
 function draw() {
   noCursor();
